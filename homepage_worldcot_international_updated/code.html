@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "secondary-container": "#d2e6bc",
+              "on-primary": "#ffffff",
+              "surface-container": "#ecefea",
+              "inverse-primary": "#acd19a",
+              "on-secondary-container": "#566846",
+              "surface-tint": "#46673a",
+              "surface-container-low": "#f2f4ef",
+              "on-secondary-fixed": "#101f05",
+              "tertiary-fixed": "#ffd8e8",
+              "outline-variant": "#c3c8bc",
+              "surface-container-high": "#e7e9e4",
+              "primary-container": "#2e4d23",
+              "tertiary-container": "#67354f",
+              "surface-bright": "#f8faf5",
+              "tertiary-fixed-dim": "#f7b3d2",
+              "on-secondary-fixed-variant": "#3b4c2c",
+              "on-primary-fixed": "#042100",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1a",
+              "primary-fixed": "#c7edb4",
+              "on-tertiary-fixed": "#350b24",
+              "error-container": "#ffdad6",
+              "background": "#f8faf5",
+              "on-primary-container": "#99bd88",
+              "tertiary": "#4d1f38",
+              "on-surface-variant": "#43483f",
+              "secondary": "#526442",
+              "surface-variant": "#e1e3de",
+              "outline": "#73796e",
+              "primary-fixed-dim": "#acd19a",
+              "on-tertiary-fixed-variant": "#693650",
+              "surface-dim": "#d8dbd6",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#2f4e24",
+              "surface-container-highest": "#e1e3de",
+              "inverse-surface": "#2e312e",
+              "secondary-fixed-dim": "#b9cda4",
+              "on-tertiary-container": "#e2a0bf",
+              "error": "#ba1a1a",
+              "primary": "#18360e",
+              "surface": "#f8faf5",
+              "inverse-on-surface": "#eff1ec",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#d5e9bf",
+              "on-surface": "#191c1a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-display { font-family: 'Noto Serif', serif; }
+        .manrope-body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface manrope-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-[#f8faf5]/80 dark:bg-[#191c1a]/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-all">
+<div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span class="font-['Noto_Serif'] text-2xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">Worldcot International</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Noto_Serif'] tracking-tight text-base text-[#2E4D23] dark:text-[#f2f4ef] border-b-2 border-[#2E4D23] pb-1 transition-colors duration-300" href="#">Home</a>
+<a class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300" href="#">Products</a>
+<a class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300" href="#">Global Reach</a>
+<a class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300" href="#">About Us</a>
+<a class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-md font-medium text-sm scale-95 active:opacity-80 transition-all">
+                Get Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden pt-12 pb-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img alt="Premium Cotton Heritage" class="w-full h-full object-cover object-center" data-alt="Close-up of high-quality raw cotton bolls in a sun-drenched field at harvest time with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4LAoA-TLLctpusRBd3oNxAEDtJMUY8Swzqx5_p0IgcVKsK4EmAGvG16LjTRouJIykeMO3coWFNqDZPTMW_RnNvPQEnuTyOwrP5WaMWENZyAKvqhjnqo7KhWa-DUq9fOf-Knzb28fyNdHhfYdQJupW_iCv1CpVmnRAcOvqgp7ZBHzlNVlhh6BTCbY9ZS2tyY-eMWw1kL5TrVzDRNZ9jEfV4uYL4ej9Lp_DzID2eH55vSOk_A9Cx8mHJsWYfEwmz5b6SuSWvhoDKos"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/30 text-primary border border-primary/10 rounded-full text-xs font-bold tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                        Established 1999
+                    </div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-primary tracking-tighter leading-[1.1]">
+                        25+ Years of <br/><span class="italic text-on-primary-container">Excellence</span> in Global Trade.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Supplying premium cotton yarn, fabrics, agro-food, and essential raw materials to global markets with a legacy of trust and sustainable sourcing.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-semibold text-base flex items-center gap-3 transition-transform hover:translate-y-[-2px] shadow-lg shadow-primary/10">
+                            Explore Commodities
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-primary px-8 py-4 rounded-md font-semibold text-base transition-colors hover:bg-surface-variant">
+                            Our Global Reach
+                        </button>
+</div>
+</div>
+</div>
+<!-- Decorative Cotton Vector Element -->
+<div class="absolute right-0 bottom-0 w-1/3 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4 rotate-12">
+<img alt="Cotton motif" class="w-full grayscale contrast-125" data-alt="Minimalist line art illustration of a cotton plant branch with soft organic curves on a transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZBp4C1wc2fOj8X4eQGuxyzA-6G9UJrO92BqZxM9b0xDO36R2Os4S4rQpj6pxPSfHG5GB7aEm75dxHtxk8z1F0Dh3h5Uh9ZtN5ykuw1wSl8EcyKK1M3Bi2O4-OwTxSYQrrAtCg4Y3hNCetgKgtLdQvOb1M-po5u2dQ71-JQTkPRU8toegOz9pAK_ex7qaKLFYDVjYNUBltBLXi95Y16tNi3B06RG3Nb3JKLrjnfJrNDXC-CZgntNruoC7HT-XEV2K1_yOGZ75WsWc"/>
+</div>
+</section>
+<!-- Our Expertise Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">Our Expertise</h2>
+<p class="text-on-surface-variant text-lg">We manage the complete value chain of natural fibers and agricultural products, ensuring rigorous quality control from farm to factory.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group mb-2" href="#">
+                        View Full Catalog
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">trending_flat</span>
+</a>
+</div>
+<!-- Bento Grid of Products -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured: Raw Cotton -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px]">
+<img alt="Raw Cotton" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Bales of premium raw white cotton stacked in a clean modern warehouse with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuzFwKK1cZZUkVPu_LqZSI32O7BFhw1gWxxQxskWf0fMjwlBtfcfb1NgAqMbXFSXv4wI1hZMDKMJeYYudOLjyj1MAicQkmFUQTmSRzmg3CW-LfyfvTNHWbT9fZgDWPduasp1wbgS-tN2UpKPlcbN1_N7J7Rt-XgilfPVL0DOPIc0Kc-Bu5byPJoruYfi4JzVqEBoFs2fjxEvueE2ROkBavEteTY-JM_sLCrS4XcaK3UqIdwhEGGmRLjm-oz8sSAogkGcne8XbbTx8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="text-on-primary-container font-bold tracking-widest uppercase text-xs mb-3 block">Primary Commodity</span>
+<h3 class="text-3xl font-headline font-bold text-on-primary mb-2">Raw Cotton</h3>
+<p class="text-on-primary/80 max-w-md text-sm leading-relaxed mb-6">High-grade fibers sourced from the world's most fertile regions, categorized by micronaire, length, and strength.</p>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-white/20 transition-all">Details</button>
+</div>
+</div>
+<!-- Cotton Yarn -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px]">
+<img alt="Cotton Yarn" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Spools of fine white cotton yarn arranged symmetrically on a textile mill production line" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9tUUNLqMwGufhiBkpHvf8GBwH505H4GF5Zi11c6S_zqhugyDamgKsG5xJnsZ8oUqyMGG792Ec6GPNN-oJfVtPDMvrm0zEWGl_YIRPHR00IJepWY-E4EP2p--F65i_gGEYXfewEZ5GnDXo_kMVR9phjmjbZPEgf8d-PEDRLUCj6jEVKlVh5vd6onnyWm67oxPxuLI9jr61KIj0GRTCD-oZ5LXvVNJ3jLAG2IOcBfFS1iyH1houFbXgVFwwT9Ixsf_rytrOtuE4eds"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-2xl font-headline font-bold text-on-primary mb-2">Cotton Yarn</h3>
+<p class="text-on-primary/80 text-sm">Superior weaving and knitting yarns.</p>
+</div>
+</div>
+<!-- Fabrics -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-secondary/20 transition-colors"></div>
+<img alt="Fabrics" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" data-alt="Macro texture of premium woven cotton fabric with intricate thread patterns and soft neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq88___BZHgXBOIH1Bfc_gUF9D1XpvhxiBEy1KNyZhFLo3UBFb3JGbLykggIg4TS3XWfT-ZUSZpMiUFl-u-d9e5WBwfHJTwj31DVhlghvsC-bmhS4bmLSO1A-tUUmPCJz9agQOuMruBNojgOfuYT2Y8euzCnUfKxY9wTps5x_YBcnWFNvlLHu6j3gdeNFhdj3o59c1VRiYEYUdfHR7lQ9H679B7UmZx9CG3oB50vKKF81SQTnh5S5BWcUrTFos8j-f7OL-JZOgyYI"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8">
+<h3 class="text-xl font-headline font-bold text-primary mb-1">Fabrics</h3>
+<p class="text-on-surface-variant text-sm">Industrial and garment grade textiles.</p>
+</div>
+</div>
+<!-- Agro & Food -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
+<img alt="Agro &amp; Food" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal display of agricultural grains and seeds in wooden bowls representing high-quality agro-food exports" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHoZzJDZwoYWzcvYfYCdz_u4lMY4TO7uzQJjEdSt8tDgu6uY3iYxjw4uSwV_uPjmLEgJsI8VcSDalNCEHZswIK7C-LdtfSdDnBtuPy98AmCGIxmPoSMnF32Vi3hWOb19jvMER8n6A0DpPz7LdW4G9irVzT_crLkIUMy2YPhGvfqvVpB7Mqz4RAUrW2X58CN5QluOpsQSXM4bcsEQ0dZMs8yihk8pm3zeRWmhFzUBh1eL3LMKvwhvL-j1Z-42nARzO32r3KUucx-Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#4d1f38]/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="text-xl font-headline font-bold text-on-primary mb-1">Agro &amp; Food</h3>
+<p class="text-on-primary/80 text-sm">Grains, pulses, and oilseeds.</p>
+</div>
+</div>
+<!-- Cotton Waste -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
+<div class="p-8 h-full flex flex-col justify-between border-2 border-dashed border-outline-variant/30">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">recycling</span>
+<h3 class="text-xl font-headline font-bold text-primary mb-2">Cotton Waste</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Sustainable byproduct solutions for industrial cleaning, papermaking, and non-woven manufacturing.</p>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
+                                Sustainability Focus
+                                <span class="material-symbols-outlined text-sm">eco</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Reach Section -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative w-full aspect-square max-w-lg mx-auto">
+<!-- Placeholder for a high-end map visual -->
+<div class="absolute inset-0 bg-primary/5 rounded-full scale-110 animate-pulse"></div>
+<img alt="Market Map" class="w-full h-full object-contain relative z-10 opacity-80" data-alt="Abstract minimalist world map with glowing nodes highlighting Southeast Asia and Bangladesh with professional digital aesthetic" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV9_HV3LauygFXq4A0_i1sThCvXMqw0HVXe-dAqAgN6hHvbEQnvG5BYs6KGZOjxOsTJRcpfGEPQcMEOUsAe1c5o_LwQLOb4CWDHC_chwcYXj8_p_AvdkGhL0tzBDVBDm186v0j7t7oFM8DQJGcqw-vuMhleH2dU6ZBsYgnIvmufFPzGMSCwdCEym4HcEcM5osDiq9clN1Zoi9oX8mBD3luNowEIxRd3-9O_BmC0WEfNeIpEqoi_YBe6KN7E70nWtciHYz-A5BgIVs"/>
+<!-- Market Callouts -->
+<div class="absolute top-[20%] right-[10%] bg-surface-container-lowest shadow-xl px-4 py-2 rounded-lg border border-outline-variant/20 flex items-center gap-2 z-20">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-bold">Vietnam</span>
+</div>
+<div class="absolute bottom-[30%] left-[5%] bg-surface-container-lowest shadow-xl px-4 py-2 rounded-lg border border-outline-variant/20 flex items-center gap-2 z-20">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-sm font-bold">Bangladesh</span>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-10">
+<div class="space-y-4">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-primary">Global Reach</h2>
+<p class="text-on-surface-variant text-lg max-w-lg leading-relaxed">
+                                Our logistics network spans continents, providing seamless trade bridges between producers and consumers in the world's most dynamic manufacturing hubs.
+                            </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-6 rounded-xl bg-surface-container-low">
+<h4 class="font-headline font-bold text-2xl text-primary mb-1">Bangladesh</h4>
+<p class="text-sm text-on-surface-variant">Core partner for the RMG sector.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low">
+<h4 class="font-headline font-bold text-2xl text-primary mb-1">Indonesia</h4>
+<p class="text-sm text-on-surface-variant">Key spinning &amp; knitting markets.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low">
+<h4 class="font-headline font-bold text-2xl text-primary mb-1">Vietnam</h4>
+<p class="text-sm text-on-surface-variant">Leading textile export channel.</p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low">
+<h4 class="font-headline font-bold text-2xl text-primary mb-1">China</h4>
+<p class="text-sm text-on-surface-variant">Strategic trade infrastructure.</p>
+</div>
+</div>
+<div class="pt-4">
+<button class="flex items-center gap-4 text-primary font-headline font-bold text-lg hover:underline decoration-2 underline-offset-8 transition-all">
+                                View Our Logistics Network
+                                <span class="material-symbols-outlined">public</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Reliability Section -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<div class="max-w-3xl mx-auto space-y-12">
+<h2 class="text-4xl md:text-6xl font-headline font-bold tracking-tight">The Worldcot Standard</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h5 class="text-xl font-headline font-bold">Premium Quality</h5>
+<p class="text-on-primary/70 text-sm">Stringent quality controls ensuring the highest grade commodities.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<h5 class="text-xl font-headline font-bold">Trade Trust</h5>
+<p class="text-on-primary/70 text-sm">Over 25 years of building unshakable global partnerships.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" style="font-variation-settings: 'FILL' 1;">forest</span>
+<h5 class="text-xl font-headline font-bold">Sustainability</h5>
+<p class="text-on-primary/70 text-sm">Promoting responsible sourcing and cotton waste circularity.</p>
+</div>
+</div>
+<div class="pt-8">
+<button class="bg-surface-container-lowest text-primary px-10 py-4 rounded-md font-bold text-lg shadow-2xl shadow-black/20">
+                            Partner with Us
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f2f4ef] dark:bg-[#191c1a]">
+<div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Manrope'] text-sm leading-relaxed text-[#2E4D23] dark:text-[#f2f4ef]">
+<div class="space-y-6">
+<span class="font-['Noto_Serif'] text-xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">Worldcot International</span>
+<p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60">Your global partner in premium natural fibers and agricultural trade excellence for over two decades.</p>
+</div>
+<div class="space-y-4">
+<h6 class="font-bold uppercase tracking-widest text-xs">Navigation</h6>
+<ul class="space-y-2">
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Home</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Products</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Global Reach</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">About Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="font-bold uppercase tracking-widest text-xs">Legal &amp; Info</h6>
+<ul class="space-y-2">
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Privacy Policy</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Terms of Service</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Sustainability Report</a></li>
+<li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4 transition-opacity duration-200" href="#">Sitemap</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h6 class="font-bold uppercase tracking-widest text-xs">Contact Headquarters</h6>
+<p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
+                    Trade District Center, Floor 24<br/>
+                    International Commerce Zone<br/>
+                    contact@worldcot.com
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">corporate_fare</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-outline-variant/10 text-center">
+<p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 text-xs uppercase tracking-widest font-medium">© 2024 Worldcot International. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
