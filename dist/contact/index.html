@@ -105,8 +105,11 @@
     <nav class="bg-[#f8faf5]/80 dark:bg-[#191c1a]/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-all">
       <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
         <a class="font-['Noto_Serif'] text-2xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]" href="/">Worldcot International</a>
+
         <div class="hidden md:flex items-center space-x-10 font-['Noto_Serif'] tracking-tight text-base">
-          <a class="text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300" href="/"
+          <a
+            class="text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
+            href="/"
             >Home</a
           >
           <a
@@ -125,11 +128,71 @@
             >Contact</a
           >
         </div>
-        <a class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all" href="/contact/">
-          Get Quote
-        </a>
+
+        <div class="flex items-center gap-3">
+          <a
+            class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all"
+            href="/contact/"
+          >
+            Get Quote
+          </a>
+          <button
+            id="mobile-menu-open"
+            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface-container-lowest text-primary active:opacity-80 transition"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
     </nav>
+
+    <!-- Mobile sidebar -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden" aria-hidden="true">
+      <button
+        id="mobile-menu-overlay"
+        class="absolute inset-0 bg-black/40"
+        type="button"
+        aria-label="Close menu"
+      ></button>
+      <aside
+        class="absolute right-0 top-0 h-full w-[min(22rem,85vw)] bg-surface-container-lowest text-on-surface shadow-2xl border-l border-outline-variant/30"
+      >
+        <div class="p-6 flex items-center justify-between border-b border-outline-variant/20">
+          <a class="font-['Noto_Serif'] text-lg font-bold text-primary" href="/">Worldcot</a>
+          <button
+            id="mobile-menu-close"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface text-primary active:opacity-80 transition"
+            type="button"
+            aria-label="Close menu"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="p-6 space-y-2">
+          <a class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface" href="/">Home</a>
+          <a
+            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
+            href="/products/"
+            >Products</a
+          >
+          <a
+            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
+            href="/about/"
+            >About Us</a
+          >
+          <a class="mobile-menu-link block px-4 py-3 rounded-lg bg-surface-container-low text-primary font-semibold" href="/contact/">Contact</a>
+          <div class="pt-4">
+            <a class="mobile-menu-link block w-full text-center bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold" href="/contact/"
+              >Get Quote</a
+            >
+          </div>
+        </nav>
+      </aside>
+    </div>
 
     <main>
       <!-- Hero Section -->
@@ -165,13 +228,22 @@
             </div>
           </div>
           <div class="relative">
-            <div class="rounded-xl overflow-hidden editorial-shadow transform rotate-1">
-              <img
-                alt="Contact support"
-                class="w-full aspect-[4/5] object-cover"
-                data-alt="Close-up of high-quality raw cotton bolls on a soft neutral fabric background with elegant natural lighting and organic textures"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN5GQVC80cy7NpsraTDJoaJRwempe9LDlFn4w9-VC7taNEK7xTSsHkV1g2tDXIgLz6H-iA6EVb5QeWi-Hhl5zwYBc9crmrew2491om80oJEWOXb19XEainz8F62L3Lt4udIOlWlOU61iA0NrHmZxR82TnJKlHmbbRLGP6ldtgFhp-gFnmrnot8jJoYVOPUSxZO7MdBCYk4T-sExKeMYe0O4Ib_w9WIIf9Vbxu8Z0sfE5b5jJAMvrvDKrim0z4ATpBJIP4aR0EClXM"
-              />
+            <div class="rounded-xl overflow-hidden editorial-shadow bg-surface-container-lowest border border-outline-variant/20">
+              <div class="p-10 md:p-12">
+                <h2 class="font-headline text-3xl md:text-4xl text-primary mb-4">Get a Quote</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                  Share your requirements and we’ll reply with availability, specs, and lead times.
+                </p>
+                <div class="mt-8 space-y-4">
+                  <div class="flex items-center gap-4 min-w-0">
+                    <span class="material-symbols-outlined text-primary">mail</span>
+                    <span class="text-on-surface font-semibold break-all">worldcottradingcorpm@gmail.com</span>
+                  </div>
+                  <div class="text-xs uppercase tracking-widest text-outline">
+                    Typically responds within 24–48 hours
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
           </div>
@@ -193,13 +265,9 @@
                 </p>
               </div>
               <div class="space-y-6">
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 min-w-0">
                   <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-                  <span class="text-on-surface font-semibold">trade@worldcot.com</span>
-                </div>
-                <div class="flex items-center gap-4">
-                  <span class="material-symbols-outlined text-primary" data-icon="call">call</span>
-                  <span class="text-on-surface font-semibold">+1 (212) 555-0198</span>
+                  <span class="text-on-surface font-semibold break-all">worldcottradingcorpm@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -294,7 +362,7 @@
           <p class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
             One Trade Plaza, Global Business Center<br />
             Floor 24, International District<br />
-            contact@worldcot.intl
+            worldcottradingcorpm@gmail.com
           </p>
         </div>
       </div>
@@ -308,6 +376,34 @@
         </div>
       </div>
     </footer>
+    <script>
+      (() => {
+        const openBtn = document.getElementById("mobile-menu-open");
+        const menu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("mobile-menu-overlay");
+        const closeBtn = document.getElementById("mobile-menu-close");
+
+        if (!openBtn || !menu || !overlay || !closeBtn) return;
+
+        const setOpen = (isOpen) => {
+          menu.classList.toggle("hidden", !isOpen);
+          menu.setAttribute("aria-hidden", String(!isOpen));
+          openBtn.setAttribute("aria-expanded", String(isOpen));
+          document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        };
+
+        openBtn.addEventListener("click", () => setOpen(true));
+        closeBtn.addEventListener("click", () => setOpen(false));
+        overlay.addEventListener("click", () => setOpen(false));
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") setOpen(false);
+        });
+
+        menu.querySelectorAll("a.mobile-menu-link").forEach((a) => {
+          a.addEventListener("click", () => setOpen(false));
+        });
+      })();
+    </script>
   </body>
 </html>
 

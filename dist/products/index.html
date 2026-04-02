@@ -131,12 +131,71 @@
             href="/contact/"
             >Contact</a
           >
-          <a class="ml-4 bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all" href="/contact/"
+          <a
+            class="ml-4 bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all"
+            href="/contact/"
             >Get Quote</a
           >
         </div>
+
+        <div class="flex items-center gap-3 md:hidden">
+          <button
+            id="mobile-menu-open"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface-container-lowest text-primary active:opacity-80 transition"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
     </nav>
+
+    <!-- Mobile sidebar -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden" aria-hidden="true">
+      <button
+        id="mobile-menu-overlay"
+        class="absolute inset-0 bg-black/40"
+        type="button"
+        aria-label="Close menu"
+      ></button>
+      <aside
+        class="absolute right-0 top-0 h-full w-[min(22rem,85vw)] bg-surface-container-lowest text-on-surface shadow-2xl border-l border-outline-variant/30"
+      >
+        <div class="p-6 flex items-center justify-between border-b border-outline-variant/20">
+          <a class="font-['Noto_Serif'] text-lg font-bold text-primary" href="/">Worldcot</a>
+          <button
+            id="mobile-menu-close"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface text-primary active:opacity-80 transition"
+            type="button"
+            aria-label="Close menu"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="p-6 space-y-2">
+          <a class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface" href="/">Home</a>
+          <a class="mobile-menu-link block px-4 py-3 rounded-lg bg-surface-container-low text-primary font-semibold" href="/products/">Products</a>
+          <a
+            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
+            href="/about/"
+            >About Us</a
+          >
+          <a
+            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
+            href="/contact/"
+            >Contact</a
+          >
+          <div class="pt-4">
+            <a class="mobile-menu-link block w-full text-center bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold" href="/contact/"
+              >Get Quote</a
+            >
+          </div>
+        </nav>
+      </aside>
+    </div>
 
     <main class="max-w-7xl mx-auto px-8 py-20">
       <!-- Hero Section -->
@@ -329,6 +388,34 @@
         </p>
       </div>
     </footer>
+    <script>
+      (() => {
+        const openBtn = document.getElementById("mobile-menu-open");
+        const menu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("mobile-menu-overlay");
+        const closeBtn = document.getElementById("mobile-menu-close");
+
+        if (!openBtn || !menu || !overlay || !closeBtn) return;
+
+        const setOpen = (isOpen) => {
+          menu.classList.toggle("hidden", !isOpen);
+          menu.setAttribute("aria-hidden", String(!isOpen));
+          openBtn.setAttribute("aria-expanded", String(isOpen));
+          document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        };
+
+        openBtn.addEventListener("click", () => setOpen(true));
+        closeBtn.addEventListener("click", () => setOpen(false));
+        overlay.addEventListener("click", () => setOpen(false));
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") setOpen(false);
+        });
+
+        menu.querySelectorAll("a.mobile-menu-link").forEach((a) => {
+          a.addEventListener("click", () => setOpen(false));
+        });
+      })();
+    </script>
   </body>
 </html>
 
