@@ -14,10 +14,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-      rel="stylesheet"
-    />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -94,316 +90,305 @@
       .editorial-shadow {
         box-shadow: 0 40px 60px -20px rgba(25, 28, 26, 0.05);
       }
-      .glass-nav {
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-      }
     </style>
   </head>
   <body class="bg-background text-on-background font-body">
-    <!-- Top Navigation Bar -->
-    <nav class="bg-[#f8faf5]/80 dark:bg-[#191c1a]/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-all">
-      <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
-        <a class="font-['Noto_Serif'] text-2xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]" href="/">Worldcot International</a>
+    <div id="site-navbar"></div>
 
-        <div class="hidden md:flex items-center space-x-10 font-['Noto_Serif'] tracking-tight text-base">
-          <a
-            class="text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/"
-            >Home</a
+    <main class="max-w-7xl mx-auto px-8 py-16">
+      <!-- Hero -->
+      <section class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4">Contact</p>
+        <h1 class="font-headline text-4xl md:text-5xl text-primary font-bold leading-tight">
+          We’d love to hear from you
+        </h1>
+        <p class="mt-5 text-on-surface-variant text-lg leading-relaxed">
+          Whether you’re sourcing cotton, exploring a partnership, or asking a quick question — send a note. We read every message.
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <!-- Form column -->
+        <div class="lg:col-span-7">
+          <div
+            id="contact-form-card"
+            class="rounded-3xl border border-outline-variant/20 bg-surface-container-lowest p-8 md:p-10 editorial-shadow"
           >
-          <a
-            class="text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/products/"
-            >Products</a
+            <h2 class="font-headline text-2xl text-primary font-bold mb-2">Send a message</h2>
+            <p class="text-on-surface-variant text-sm mb-8">Fields marked * are required.</p>
+
+            <form id="contact-form" class="space-y-6" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-sm font-medium text-on-surface" for="first-name">First name *</label>
+                  <input
+                    id="first-name"
+                    name="firstName"
+                    required
+                    autocomplete="given-name"
+                    class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+                    type="text"
+                  />
+                  <p class="hidden text-error text-xs" data-error-for="first-name">Please enter your first name.</p>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-medium text-on-surface" for="last-name">Last name *</label>
+                  <input
+                    id="last-name"
+                    name="lastName"
+                    required
+                    autocomplete="family-name"
+                    class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+                    type="text"
+                  />
+                  <p class="hidden text-error text-xs" data-error-for="last-name">Please enter your last name.</p>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-on-surface" for="company">Company *</label>
+                <input
+                  id="company"
+                  name="company"
+                  required
+                  autocomplete="organization"
+                  class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+                  type="text"
+                />
+                <p class="hidden text-error text-xs" data-error-for="company">Please enter your company name.</p>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-on-surface" for="email">Email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+                  type="email"
+                />
+                <p class="hidden text-error text-xs" data-error-for="email">Please enter a valid email address.</p>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-on-surface" for="topic">Topic *</label>
+                <select
+                  id="topic"
+                  name="topic"
+                  required
+                  class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+                >
+                  <option value="">Choose a topic</option>
+                  <option value="sourcing">Sourcing</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="investment">Investment</option>
+                  <option value="general">General</option>
+                </select>
+                <p class="hidden text-error text-xs" data-error-for="topic">Please select a topic.</p>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-medium text-on-surface" for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="w-full rounded-lg border border-outline-variant/30 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent resize-y min-h-[120px]"
+                  placeholder="Tell us what you need — commodity, specs, quantity, destination, timeline…"
+                ></textarea>
+                <p class="hidden text-error text-xs" data-error-for="message">Please add a short message.</p>
+              </div>
+
+              <button
+                class="w-full sm:w-auto bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:opacity-95 transition inline-flex items-center justify-center gap-2"
+                type="submit"
+              >
+                Send message
+                <span class="material-symbols-outlined text-base">send</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Success state -->
+          <div
+            id="contact-success"
+            class="hidden rounded-3xl border border-outline-variant/20 bg-secondary-container/40 p-8 md:p-10 editorial-shadow"
+            role="status"
+            aria-live="polite"
           >
-          <a
-            class="text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/about/"
-            >About Us</a
-          >
-          <a
-            class="text-[#2E4D23] dark:text-[#f2f4ef] border-b-2 border-[#2E4D23] pb-1 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/contact/"
-            >Contact</a
-          >
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1">check_circle</span>
+              <div>
+                <h2 class="font-headline text-2xl text-primary font-bold">Thank you — we’ve got your message</h2>
+                <p class="mt-3 text-on-surface-variant leading-relaxed">
+                  If your email app opened, you’re all set. If not, you can always reach us directly at
+                  <a class="font-semibold text-primary underline" href="mailto:worldcottradingcorpm@gmail.com">worldcottradingcorpm@gmail.com</a>.
+                </p>
+                <p class="mt-4 text-primary font-semibold">
+                  A real person, not an automated reply, within one business day.
+                </p>
+                <button
+                  id="contact-reset"
+                  class="mt-8 text-primary font-semibold underline underline-offset-4"
+                  type="button"
+                >
+                  Send another message
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="flex items-center gap-3">
-          <a
-            class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all"
-            href="/contact/"
-          >
-            Get Quote
-          </a>
-          <button
-            id="mobile-menu-open"
-            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface-container-lowest text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
+        <!-- Trust column -->
+        <div class="lg:col-span-5 space-y-8">
+          <!-- Direct contact -->
+          <div class="rounded-3xl border border-outline-variant/20 bg-surface-container-lowest p-8 editorial-shadow">
+            <h2 class="font-headline text-xl text-primary font-bold mb-6">Direct contact</h2>
+            <ul class="space-y-5 text-on-surface-variant">
+              <li class="flex gap-4 min-w-0">
+                <span class="material-symbols-outlined text-primary shrink-0">mail</span>
+                <div class="min-w-0">
+                  <p class="text-xs font-bold uppercase tracking-widest text-outline mb-1">Email</p>
+                  <a class="font-semibold text-primary break-all hover:underline" href="mailto:worldcottradingcorpm@gmail.com"
+                    >worldcottradingcorpm@gmail.com</a
+                  >
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="material-symbols-outlined text-primary shrink-0">call</span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-outline mb-1">Phone</p>
+                  <p class="font-semibold text-on-surface">Available on request</p>
+                  <p class="text-sm mt-1">We’ll share a direct line after we understand your inquiry.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="material-symbols-outlined text-primary shrink-0">location_on</span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-outline mb-1">HQ</p>
+                  <p class="font-semibold text-on-surface">India — global trade desk</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="material-symbols-outlined text-primary shrink-0">schedule</span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-outline mb-1">Response time</p>
+                  <p class="font-semibold text-on-surface">Within one business day</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Promise -->
+          <p class="text-center md:text-left text-primary font-headline text-lg font-bold leading-snug px-2">
+            A real person, not an automated reply, within one business day.
+          </p>
         </div>
       </div>
-    </nav>
-
-    <!-- Mobile sidebar -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden" aria-hidden="true">
-      <button
-        id="mobile-menu-overlay"
-        class="absolute inset-0 bg-black/40"
-        type="button"
-        aria-label="Close menu"
-      ></button>
-      <aside
-        class="absolute right-0 top-0 h-full w-[min(22rem,85vw)] bg-surface-container-lowest text-on-surface shadow-2xl border-l border-outline-variant/30"
-      >
-        <div class="p-6 flex items-center justify-between border-b border-outline-variant/20">
-          <a class="font-['Noto_Serif'] text-lg font-bold text-primary" href="/">Worldcot</a>
-          <button
-            id="mobile-menu-close"
-            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Close menu"
-          >
-            <span class="material-symbols-outlined">close</span>
-          </button>
-        </div>
-        <nav class="p-6 space-y-2">
-          <a class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface" href="/">Home</a>
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/products/"
-            >Products</a
-          >
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/about/"
-            >About Us</a
-          >
-          <a class="mobile-menu-link block px-4 py-3 rounded-lg bg-surface-container-low text-primary font-semibold" href="/contact/">Contact</a>
-          <div class="pt-4">
-            <a class="mobile-menu-link block w-full text-center bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold" href="/contact/"
-              >Get Quote</a
-            >
-          </div>
-        </nav>
-      </aside>
-    </div>
-
-    <main>
-      <!-- Hero Section -->
-      <section class="relative py-20 md:py-32 px-8 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="z-10">
-            <h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight tracking-tight mb-8">
-              Connect with the <br /><span class="italic text-secondary">Global Source.</span>
-            </h1>
-            <p class="text-on-surface-variant text-lg md:text-xl max-w-lg leading-relaxed mb-12">
-              Whether you are seeking premium raw cotton or specialized textile fibers, our global network is ready to
-              facilitate your international trade requirements.
-            </p>
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined" data-icon="public">public</span>
-                </div>
-                <div>
-                  <p class="font-bold text-primary">24/7 Presence</p>
-                  <p class="text-sm text-on-surface-variant">Global Timezone Coverage</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
-                </div>
-                <div>
-                  <p class="font-bold text-primary">Certified Quality</p>
-                  <p class="text-sm text-on-surface-variant">Standardized Logistics</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative">
-            <div class="rounded-xl overflow-hidden editorial-shadow bg-surface-container-lowest border border-outline-variant/20">
-              <div class="p-10 md:p-12">
-                <h2 class="font-headline text-3xl md:text-4xl text-primary mb-4">Get a Quote</h2>
-                <p class="text-on-surface-variant leading-relaxed">
-                  Share your requirements and we’ll reply with availability, specs, and lead times.
-                </p>
-                <div class="mt-8 space-y-4">
-                  <div class="flex items-center gap-4 min-w-0">
-                    <span class="material-symbols-outlined text-primary">mail</span>
-                    <span class="text-on-surface font-semibold break-all">worldcottradingcorpm@gmail.com</span>
-                  </div>
-                  <div class="text-xs uppercase tracking-widest text-outline">
-                    Typically responds within 24–48 hours
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Direct Access Grid (Asymmetric) -->
-      <section class="py-24 bg-surface-container-low">
-        <div class="max-w-7xl mx-auto px-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="md:col-span-1 bg-surface-container-lowest p-10 rounded-xl editorial-shadow flex flex-col justify-between">
-              <div>
-                <span class="text-primary-container font-headline text-sm uppercase tracking-widest mb-4 block"
-                  >Communication</span
-                >
-                <h3 class="font-headline text-3xl text-primary mb-6">Direct Access</h3>
-                <p class="text-on-surface-variant mb-8">
-                  Reach our dedicated trade desk for immediate inquiries and live market updates.
-                </p>
-              </div>
-              <div class="space-y-6">
-                <div class="flex items-center gap-4 min-w-0">
-                  <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-                  <span class="text-on-surface font-semibold break-all">worldcottradingcorpm@gmail.com</span>
-                </div>
-              </div>
-            </div>
-            <div class="md:col-span-2 bg-surface-container-lowest p-10 md:p-16 rounded-xl editorial-shadow">
-              <h3 class="font-headline text-3xl text-primary mb-10">Submit a Formal Inquiry</h3>
-              <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-2">
-                  <label class="text-sm font-label text-on-surface-variant">Full Name</label>
-                  <input
-                    class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all"
-                    placeholder="Johnathan Sterling"
-                    type="text"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-label text-on-surface-variant">Professional Email</label>
-                  <input
-                    class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all"
-                    placeholder="j.sterling@company.com"
-                    type="email"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-label text-on-surface-variant">Organization</label>
-                  <input
-                    class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all"
-                    placeholder="Global Textiles Ltd."
-                    type="text"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label class="text-sm font-label text-on-surface-variant">Product Interest</label>
-                  <select class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all">
-                    <option>Raw Cotton</option>
-                    <option>Yarn</option>
-                    <option>Fabrics</option>
-                    <option>Agro-Food</option>
-                    <option>Cotton Waste</option>
-                  </select>
-                </div>
-                <div class="md:col-span-2 space-y-2">
-                  <label class="text-sm font-label text-on-surface-variant">Message</label>
-                  <textarea
-                    class="w-full bg-surface-container-high border-none rounded-md px-4 py-3 focus:ring-2 focus:ring-primary-container transition-all"
-                    placeholder="Please detail your requirements..."
-                    rows="4"
-                  ></textarea>
-                </div>
-                <div class="md:col-span-2 pt-4">
-                  <button
-                    class="w-full md:w-auto bg-primary-container text-on-primary-container hover:bg-primary px-10 py-4 rounded-md font-bold transition-all shadow-lg"
-                    type="submit"
-                  >
-                    Send Inquiry
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#f2f4ef] dark:bg-[#191c1a] full-width">
-      <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div class="space-y-6">
-          <div class="font-['Noto_Serif'] text-xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">Worldcot International</div>
-          <p class="font-['Manrope'] text-sm leading-relaxed text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            Pioneering excellence in the global textile and agricultural commodity markets for over three decades.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h5 class="font-bold text-primary">Quick Links</h5>
-          <ul class="font-['Manrope'] text-sm leading-relaxed space-y-2">
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/">Home</a></li>
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/products/">Products</a></li>
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/about/">About Us</a></li>
-          </ul>
-        </div>
-        <div class="space-y-4">
-          <h5 class="font-bold text-primary">Compliance</h5>
-          <ul class="font-['Manrope'] text-sm leading-relaxed space-y-2">
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Privacy Policy</a></li>
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Terms of Service</a></li>
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Sustainability Report</a></li>
-            <li><a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Sitemap</a></li>
-          </ul>
-        </div>
-        <div class="space-y-4">
-          <h5 class="font-bold text-primary">Connect</h5>
-          <p class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            One Trade Plaza, Global Business Center<br />
-            Floor 24, International District<br />
-            worldcottradingcorpm@gmail.com
-          </p>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-8 pb-8 flex flex-col md:flex-row justify-between border-t border-outline-variant/20 pt-8">
-        <p class="font-['Manrope'] text-sm leading-relaxed text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-          © 2024 Worldcot International. All rights reserved.
-        </p>
-        <div class="flex gap-6 mt-4 md:mt-0">
-          <span class="text-xs text-on-surface-variant/40">Registered Trade Mark</span>
-          <span class="text-xs text-on-surface-variant/40">ISO 9001:2015</span>
-        </div>
-      </div>
-    </footer>
+    <div id="site-footer"></div>
+
+    <script src="/shared/site-chrome.js"></script>
+    <script>
+      window.WorldcotChrome?.mount({ active: "contact" });
+    </script>
     <script>
       (() => {
-        const openBtn = document.getElementById("mobile-menu-open");
-        const menu = document.getElementById("mobile-menu");
-        const overlay = document.getElementById("mobile-menu-overlay");
-        const closeBtn = document.getElementById("mobile-menu-close");
+        const form = document.getElementById("contact-form");
+        const formCard = document.getElementById("contact-form-card");
+        const success = document.getElementById("contact-success");
+        const resetBtn = document.getElementById("contact-reset");
 
-        if (!openBtn || !menu || !overlay || !closeBtn) return;
+        if (!form || !formCard || !success) return;
 
-        const setOpen = (isOpen) => {
-          menu.classList.toggle("hidden", !isOpen);
-          menu.setAttribute("aria-hidden", String(!isOpen));
-          openBtn.setAttribute("aria-expanded", String(isOpen));
-          document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        const showError = (id, show) => {
+          const el = document.querySelector(`[data-error-for="${id}"]`);
+          if (el) el.classList.toggle("hidden", !show);
+          const input = document.getElementById(id);
+          if (input) input.classList.toggle("ring-2", show);
+          if (input) input.classList.toggle("ring-error", show);
         };
 
-        openBtn.addEventListener("click", () => setOpen(true));
-        closeBtn.addEventListener("click", () => setOpen(false));
-        overlay.addEventListener("click", () => setOpen(false));
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") setOpen(false);
+        const clearErrors = () => {
+          ["first-name", "last-name", "company", "email", "topic", "message"].forEach((id) => showError(id, false));
+        };
+
+        const validate = () => {
+          clearErrors();
+          let ok = true;
+
+          const first = document.getElementById("first-name");
+          const last = document.getElementById("last-name");
+          const company = document.getElementById("company");
+          const email = document.getElementById("email");
+          const topic = document.getElementById("topic");
+          const message = document.getElementById("message");
+
+          if (!first?.value.trim()) {
+            showError("first-name", true);
+            ok = false;
+          }
+          if (!last?.value.trim()) {
+            showError("last-name", true);
+            ok = false;
+          }
+          if (!company?.value.trim()) {
+            showError("company", true);
+            ok = false;
+          }
+          if (!email?.value.trim() || !email.checkValidity()) {
+            showError("email", true);
+            ok = false;
+          }
+          if (!topic?.value) {
+            showError("topic", true);
+            ok = false;
+          }
+          if (!message?.value.trim()) {
+            showError("message", true);
+            ok = false;
+          }
+
+          return ok;
+        };
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!validate()) return;
+
+          const first = document.getElementById("first-name")?.value.trim() || "";
+          const last = document.getElementById("last-name")?.value.trim() || "";
+          const company = document.getElementById("company")?.value.trim() || "";
+          const email = document.getElementById("email")?.value.trim() || "";
+          const topic = document.getElementById("topic")?.value || "";
+          const message = document.getElementById("message")?.value.trim() || "";
+
+          const topicLabel =
+            { sourcing: "Sourcing", partnership: "Partnership", investment: "Investment", general: "General" }[topic] ||
+            topic;
+
+          const subject = encodeURIComponent(`[${topicLabel}] ${company}`);
+          const body = encodeURIComponent(
+            `Name: ${first} ${last}\nCompany: ${company}\nEmail: ${email}\nTopic: ${topicLabel}\n\n${message}`
+          );
+          const mailto = `mailto:worldcottradingcorpm@gmail.com?subject=${subject}&body=${body}`;
+
+          window.location.href = mailto;
+
+          formCard.classList.add("hidden");
+          success.classList.remove("hidden");
         });
 
-        menu.querySelectorAll("a.mobile-menu-link").forEach((a) => {
-          a.addEventListener("click", () => setOpen(false));
+        resetBtn?.addEventListener("click", () => {
+          form.reset();
+          clearErrors();
+          success.classList.add("hidden");
+          formCard.classList.remove("hidden");
         });
       })();
     </script>
   </body>
 </html>
-

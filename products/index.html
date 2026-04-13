@@ -95,325 +95,458 @@
         font-family: "Noto Serif";
         letter-spacing: -0.02em;
       }
-      .cotton-watermark {
-        mask-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-        opacity: 0.05;
+      .wc-modal-open {
+        overflow: hidden;
       }
     </style>
   </head>
   <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
-    <!-- TopNavBar -->
-    <nav class="bg-[#f8faf5]/80 dark:bg-[#191c1a]/80 backdrop-blur-md docked full-width top-0 sticky z-50">
-      <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
-        <div class="flex items-center gap-4">
-          <span class="font-['Noto_Serif'] text-2xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">
-            <a href="/">Worldcot International</a>
-          </span>
-        </div>
-        <div class="hidden md:flex gap-8 items-center">
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/"
-            >Home</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#2E4D23] dark:text-[#f2f4ef] border-b-2 border-[#2E4D23] pb-1 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/products/"
-            >Products</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/about/"
-            >About Us</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/contact/"
-            >Contact</a
-          >
-          <a
-            class="ml-4 bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium scale-95 active:opacity-80 transition-all"
-            href="/contact/"
-            >Get Quote</a
-          >
-        </div>
+    <div id="site-navbar"></div>
 
-        <div class="flex items-center gap-3 md:hidden">
-          <button
-            id="mobile-menu-open"
-            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface-container-lowest text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
+    <main class="max-w-7xl mx-auto px-8 py-16">
+      <!-- Hero -->
+      <section class="rounded-3xl border border-outline-variant/20 bg-surface-container-lowest p-10 md:p-12 overflow-hidden relative">
+        <div class="absolute -top-16 -right-16 opacity-10 pointer-events-none">
+          <span class="material-symbols-outlined text-[220px] text-primary">inventory_2</span>
         </div>
-      </div>
-    </nav>
+        <div class="relative">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4">Products</p>
+          <h1 class="text-4xl md:text-5xl serif-tight font-bold text-primary leading-tight max-w-4xl">
+            Sourced with care. Delivered with clarity.
+          </h1>
+          <p class="mt-5 text-on-surface-variant max-w-3xl leading-relaxed text-lg">
+            Explore our core categories—built for repeat buying with consistent lots, documentation discipline, and practical trade support.
+          </p>
+        </div>
+      </section>
 
-    <!-- Mobile sidebar -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden" aria-hidden="true">
-      <button
-        id="mobile-menu-overlay"
-        class="absolute inset-0 bg-black/40"
-        type="button"
-        aria-label="Close menu"
-      ></button>
-      <aside
-        class="absolute right-0 top-0 h-full w-[min(22rem,85vw)] bg-surface-container-lowest text-on-surface shadow-2xl border-l border-outline-variant/30"
-      >
-        <div class="p-6 flex items-center justify-between border-b border-outline-variant/20">
-          <a class="font-['Noto_Serif'] text-lg font-bold text-primary" href="/">Worldcot</a>
-          <button
-            id="mobile-menu-close"
-            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Close menu"
-          >
-            <span class="material-symbols-outlined">close</span>
-          </button>
-        </div>
-        <nav class="p-6 space-y-2">
-          <a class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface" href="/">Home</a>
-          <a class="mobile-menu-link block px-4 py-3 rounded-lg bg-surface-container-low text-primary font-semibold" href="/products/">Products</a>
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/about/"
-            >About Us</a
-          >
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/contact/"
-            >Contact</a
-          >
-          <div class="pt-4">
-            <a class="mobile-menu-link block w-full text-center bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold" href="/contact/"
-              >Get Quote</a
+      <!-- Catalog -->
+      <section class="mt-10 space-y-12">
+        <!-- Cotton -->
+        <section class="wc-section" data-section="cotton">
+          <div class="flex items-end justify-between gap-6 mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-[0.2em]">
+                <span class="material-symbols-outlined text-sm">eco</span> Cotton
+              </div>
+              <h2 class="mt-4 font-headline text-3xl md:text-4xl text-primary font-bold">Cotton</h2>
+              <p class="mt-3 text-on-surface-variant max-w-3xl leading-relaxed">
+                Certified and conventional cotton options with spec discipline and shipment-ready documentation.
+              </p>
+            </div>
+            <button
+              class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              type="button"
+              data-spec-button="cotton"
             >
+              More specifications <span class="material-symbols-outlined text-sm">trending_flat</span>
+            </button>
           </div>
-        </nav>
-      </aside>
-    </div>
 
-    <main class="max-w-7xl mx-auto px-8 py-20">
-      <!-- Hero Section -->
-      <header class="mb-24">
-        <h1 class="text-6xl md:text-7xl serif-tight font-bold text-primary mb-6 max-w-4xl">
-          The Global Standard in <span class="italic text-secondary">Sustainable Fiber</span>.
-        </h1>
-        <p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed mb-12">
-          From organic cotton fields to precision-engineered yarns, Worldcot International bridges the gap between raw
-          natural resources and premium textile manufacturing.
-        </p>
-        <div class="h-[1px] w-full bg-outline-variant opacity-20"></div>
-      </header>
-
-      <!-- Product Catalog - Asymmetric Bento Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-        <section class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest">
-          <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent z-10"></div>
-          <img
-            class="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
-            data-alt="Close-up of fluffy white raw cotton bolls on a branch under soft golden agricultural sunlight"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaWJmawwXTeaYcijpd8FfzEyFpETpLnIVq2sCxG8eQxSRmHw-plMydCquvZ2PDBomYZ-Fn8MkZnXl5tXM-CwPjIadh-NZWJ7r5jxTEqzqO6MsF-ICAHqlJ2-qdBNa2k0Mhd7T4sct8UC4TRb395kL5XRhoXV2XeB8Fb0WgpMIaAs5mQFwQkiVSO11niLwX3wms8tQRY1RXsK1tDA_9RAq4H795Rpz_DeIm2taAuUFtNd2_qgIPe_AL-QWvCDO4OdSV720Qj_A8RBc"
-          />
-          <div class="absolute bottom-0 left-0 p-12 z-20 w-full">
-            <span
-              class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-4 rounded-full"
-              >Primary Sourcing</span
-            >
-            <h2 class="text-4xl serif-tight font-bold text-white mb-4">Raw Cotton</h2>
-            <p class="text-white/80 max-w-lg mb-8 font-light">
-              Our premium selections include Conventional, GOTS Organic, Regenagri, and Primemark certified fibers.
-              Specializing in Mcu5, S6, and DCH varieties for superior tensile strength.
-            </p>
-            <div class="flex flex-wrap gap-4 items-center">
-              <a class="bg-white text-primary px-8 py-3 rounded-md font-bold flex items-center gap-2 hover:bg-surface-container-low transition-colors" href="/contact/">
-                Inquire Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Organic Cotton</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                For brands requiring traceability and compliance-first sourcing—aligned to end-use and approvals.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Organic%20Cotton%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
-              <div class="flex gap-4 text-white/60 text-sm">
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span> GOTS</span>
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">eco</span> Regenagri</span>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Conventional Cotton</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
               </div>
-            </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                A dependable range of cotton grades sourced to spec—built for consistent lots and repeat buying.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Conventional%20Cotton%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Cotton Waste</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Contamination-conscious sourcing for open-end spinning and recycling applications.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Waste%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">PSCP / Primark Program</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Program-aligned sourcing with documentation discipline—supporting buyer compliance requirements.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=PSCP%20%2F%20Primark%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Flat Strips</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Processed cotton waste inputs with controlled specs—suited for mills with consistent feed requirements.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Flat%20Strips%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="cotton">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Regenagri / Responsible Cotton</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary-fixed/60 px-3 py-1 rounded-full">Cotton</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                For sustainability-led sourcing programs—supporting responsible practices and buyer documentation.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Regenagri%20Cotton%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
           </div>
         </section>
 
-        <section class="md:col-span-4 flex flex-col bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
-          <div class="h-64 rounded-lg overflow-hidden mb-8">
-            <img
-              class="w-full h-full object-cover"
-              data-alt="Neat rows of colorful high-quality cotton yarn spools in a textile factory setting with soft depth of field"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXumH-6fCNdRxmcYmNzUqxwzrWX987PTt_N6_iJH7gocxhtbicMM7dcegOxmD_2wgKqQxhi48EwoRF4v2MVhlb7LHVTwVr2G-jDbEfZJzsUqQRCQsF6iTax0OWdm9I2IUcTowTk37vyqKaDKIUMD1p7p-2nZ-Jhz3gIduroJHIStO4rUpbP5qwuhD_BmHDUsenRWfCwbHf2XC3U9AZ1YTi9YEIKJpxXMlGNkFe2TjeTDpnN2enFit_3YZiZLUYVr_SGE7kDBOQPJQ"
-            />
+        <!-- Yarn & Textile -->
+        <section id="textile" class="wc-section scroll-mt-24" data-section="yarn">
+          <div class="flex items-end justify-between gap-6 mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#e2f0ff] text-[#153a66] text-xs font-bold uppercase tracking-[0.2em]">
+                <span class="material-symbols-outlined text-sm">receipt_long</span> Yarn &amp; Textile
+              </div>
+              <h2 class="mt-4 font-headline text-3xl md:text-4xl text-primary font-bold">Yarn &amp; Textile</h2>
+              <p class="mt-3 text-on-surface-variant max-w-3xl leading-relaxed">
+                Textile-grade inputs with consistent specs and repeatable supply.
+              </p>
+            </div>
+            <button
+              class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              type="button"
+              data-spec-button="yarn"
+            >
+              More specifications <span class="material-symbols-outlined text-sm">trending_flat</span>
+            </button>
           </div>
-          <h2 class="text-2xl serif-tight font-bold text-primary mb-4">Cotton Yarn</h2>
-          <p class="text-on-surface-variant mb-auto leading-relaxed">
-            A comprehensive range of counts and types engineered for global textile manufacturing, ensuring consistency
-            in every spool.
-          </p>
-          <a class="mt-8 text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="/contact/">
-            Inquire Now <span class="material-symbols-outlined">chevron_right</span>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="yarn">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Cotton Yarn</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#153a66] bg-[#e2f0ff] px-3 py-1 rounded-full">Yarn</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Carded, combed, compact, and sustainable certified yarns—aligned to your count and end-use.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Yarn%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="yarn">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Textile-grade inputs</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#153a66] bg-[#e2f0ff] px-3 py-1 rounded-full">Textile</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Fabric and related textile inputs sourced for consistent performance and predictable dispatch.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Textile%20Inputs%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Agro -->
+        <section class="wc-section" data-section="agro">
+          <div class="flex items-end justify-between gap-6 mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#fff0d6] text-[#6b3a0a] text-xs font-bold uppercase tracking-[0.2em]">
+                <span class="material-symbols-outlined text-sm">agriculture</span> Agro
+              </div>
+              <h2 class="mt-4 font-headline text-3xl md:text-4xl text-primary font-bold">Agro commodities</h2>
+              <p class="mt-3 text-on-surface-variant max-w-3xl leading-relaxed">
+                Bulk sourcing with clear specs, documentation, and shipment coordination.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Grains</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6b3a0a] bg-[#fff0d6] px-3 py-1 rounded-full">Agro</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Consistent bulk grain supply with documentation discipline and delivery clarity.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Grains%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Pulses</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6b3a0a] bg-[#fff0d6] px-3 py-1 rounded-full">Agro</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Buyer-aligned quality specs and dependable shipment coordination for pulses.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Pulses%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Oilseeds</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6b3a0a] bg-[#fff0d6] px-3 py-1 rounded-full">Agro</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Spec-driven sourcing and documentation for smooth clearance and planning.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Oilseeds%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+            <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">Custom sourcing</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#6b3a0a] bg-[#fff0d6] px-3 py-1 rounded-full">Agro</span>
+              </div>
+              <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
+                Need something not listed? Share specs and destination—our team will propose options.
+              </p>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Custom%20Sourcing%20Inquiry">
+                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-14 p-10 bg-surface-container-low rounded-2xl border border-outline-variant/10">
+        <div class="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+          <div>
+            <h2 class="font-headline text-3xl text-primary mb-2">Need something not listed?</h2>
+            <p class="text-on-surface-variant max-w-2xl leading-relaxed">
+              Share your specifications, quantity, and destination. We’ll propose options and a clear quote path.
+            </p>
+          </div>
+          <a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-semibold" href="/contact/">
+            Enquire Now
           </a>
-        </section>
-
-        <section class="md:col-span-4 flex flex-col bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
-          <div class="h-64 rounded-lg overflow-hidden mb-8">
-            <img
-              class="w-full h-full object-cover"
-              data-alt="Stacks of premium quality woven cotton fabrics showing various textures and soft neutral earth tones"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmThgZZUj4-wKETsi7FEKQkZUdcdmeFKLogTcw6n9mtLwK7CJpZAxC3jZuCwdweGrTUWIB33dOc0oDj_TTjdXrFiWwGKs7plfb6TQ021KILWHdPiYBLjpoeTxOq4Q8aNzVChFLKhuBdUbs45s7HKdffwIoI79OWreVONxiW6J4kz5MSQoxPoW_Tb1iV6xVeMUspLxccuciAaGYRf2qYQtWQqpHKPDtG9BdyognnD9_3_lc3zlLgpSgCBUWDJOt-3in0x8Td43SGW8"
-            />
-          </div>
-          <h2 class="text-2xl serif-tight font-bold text-primary mb-4">Premium Fabrics</h2>
-          <p class="text-on-surface-variant mb-auto leading-relaxed">
-            Sourcing of high-grade textile materials for fashion and industrial applications, maintaining strict
-            quality assurance protocols.
-          </p>
-          <a class="mt-8 text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="/contact/">
-            Inquire Now <span class="material-symbols-outlined">chevron_right</span>
-          </a>
-        </section>
-
-        <section class="md:col-span-4 group relative overflow-hidden rounded-xl bg-primary">
-          <img
-            class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000"
-            data-alt="Handful of raw grains and pulses showing organic texture and high-quality agricultural yield"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1ch3nSlE7kuWTEaQPXBmiSJYG7o53lXWLgx5Vy9Y5l5gxx735BUsnOEXv5UqFl_D4vivLKFgCkX4bDWIas2ScGX7y8qPvQpZK0rWxZ2DLRYoB1FwXkOZjNlnwzIEnaASgf7bcY0UiOZaVcBxtyARHaF7brX5lpVDrWWzdD7fC5b8KdI3bfygOG2voWliNknvRtBOzTlG3TLhDR_oPKH2vuer-khEqQ11sH56J7obtSuqDEoCDbJzZsoZYKk1fQt3geTJ3GiH6qU"
-          />
-          <div class="relative p-8 h-full flex flex-col justify-end z-10 min-h-[400px]">
-            <h2 class="text-3xl serif-tight font-bold text-white mb-4">Agro &amp; Food</h2>
-            <p class="text-white/80 mb-6">Reliable supply of grains, pulses, and essential oils sourced from sustainable global networks.</p>
-            <a class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-md font-bold w-fit hover:bg-white transition-colors" href="/contact/">
-              Inquire Now
-            </a>
-          </div>
-        </section>
-
-        <section class="md:col-span-4 flex flex-col bg-surface-container-low rounded-xl p-8 border border-outline-variant/10">
-          <div class="flex items-start justify-between mb-6">
-            <div class="p-3 bg-primary-container/10 rounded-full">
-              <span class="material-symbols-outlined text-primary text-3xl">recycling</span>
-            </div>
-            <span class="text-xs font-bold text-primary tracking-widest uppercase">Circular Economy</span>
-          </div>
-          <h2 class="text-2xl serif-tight font-bold text-primary mb-4">Cotton Waste</h2>
-          <p class="text-on-surface-variant mb-6 leading-relaxed">
-            Specialized materials including flat strips and industrial-grade waste for eco-conscious recycling and production lines.
-          </p>
-          <div class="mt-auto h-40 rounded-lg overflow-hidden border border-outline-variant/20">
-            <img
-              class="w-full h-full object-cover grayscale opacity-50 hover:grayscale-0 transition-all"
-              data-alt="Close-up of recycled textile fibers showing a mix of soft white and off-white raw materials"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8KhgLMTiYYhwZD-ugmhC2OTOZcTopWXIYPHLmgx2Zkd52zn-wTUM2xOQ3sgd15a_m4Stz-2rRmg1T_2lkIZTMZZNGMYl_-aM42Zv7T2tlUjKag4x53bL1BrP3PPsfpVn-DsdL3dSEAxhpMfemS3F2b2xXOWY0z9c1G0-X9nLgnPj8a52fKsPi6mD9uLogO57mMJlqdFsYn4mjgjtrCHysGy2DAdxQTl4Pw5FatIeMO7ZFiOVsGwcQn5SavsJ52fZeUkv3Nn7jnhY"
-            />
-          </div>
-          <a class="mt-6 text-primary font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="/contact/">
-            Inquire Now <span class="material-symbols-outlined">chevron_right</span>
-          </a>
-        </section>
-      </div>
-
-      <section class="mt-32 p-16 bg-surface-container rounded-3xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 cotton-watermark -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-        <div class="max-w-2xl">
-          <h2 class="text-4xl serif-tight font-bold text-primary mb-8">Our Quality Assurance</h2>
-          <div class="space-y-8">
-            <div class="flex gap-6">
-              <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
-              <div>
-                <h3 class="font-bold text-lg text-primary">Traceable Sourcing</h3>
-                <p class="text-on-surface-variant">
-                  Every bale of cotton is traced back to its origin, ensuring ethical labor and sustainable agricultural practices.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-6">
-              <span class="material-symbols-outlined text-primary text-3xl">biotech</span>
-              <div>
-                <h3 class="font-bold text-lg text-primary">Laboratory Testing</h3>
-                <p class="text-on-surface-variant">
-                  Advanced HVI testing for fiber length, micronaire, and strength to meet precise manufacturing requirements.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-6">
-              <span class="material-symbols-outlined text-primary text-3xl">public</span>
-              <div>
-                <h3 class="font-bold text-lg text-primary">Global Logistics</h3>
-                <p class="text-on-surface-variant">
-                  Streamlined supply chain solutions spanning across continents with timely delivery and port-to-port security.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#f2f4ef] dark:bg-[#191c1a]">
-      <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div class="md:col-span-1">
-          <span class="font-['Noto_Serif'] text-xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">Worldcot International</span>
-          <p class="mt-6 font-['Manrope'] text-sm leading-relaxed text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            Leading the global cotton trade with integrity, sustainability, and unparalleled quality standards for over three decades.
-          </p>
+    <!-- Specifications modal -->
+    <div id="wc-spec-modal" class="fixed inset-0 z-[90] hidden" aria-hidden="true">
+      <button id="wc-spec-modal-overlay" class="absolute inset-0 bg-black/35" type="button" aria-label="Close"></button>
+      <aside
+        class="absolute right-0 top-0 h-full w-[min(44rem,94vw)] bg-surface-container-lowest border-l border-outline-variant/25 shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Specifications"
+      >
+        <div class="p-6 border-b border-outline-variant/15 flex items-start justify-between gap-4">
+          <div>
+            <p id="wc-spec-modal-title" class="font-headline font-bold text-primary text-2xl"></p>
+            <p id="wc-spec-modal-subtitle" class="text-on-surface-variant text-sm mt-1"></p>
+          </div>
+          <button
+            id="wc-spec-modal-close"
+            class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-outline-variant/30 bg-surface text-primary"
+            type="button"
+            aria-label="Close"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <div class="flex flex-col gap-4">
-          <h4 class="font-bold text-primary mb-2">Navigation</h4>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/">Home</a>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/products/">Products</a>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/about/">About Us</a>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="/contact/">Contact</a>
-        </div>
-        <div class="flex flex-col gap-4">
-          <h4 class="font-bold text-primary mb-2">Resources</h4>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Privacy Policy</a>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Terms of Service</a>
-          <a class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline" href="#">Sitemap</a>
-        </div>
-        <div class="flex flex-col gap-4">
-          <h4 class="font-bold text-primary mb-2">Contact Us</h4>
-          <p class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            Headquarters:<br />Global Trade Center, Level 14<br />Singapore 018981
-          </p>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-8 py-8 border-t border-outline-variant/10">
-        <p class="font-['Manrope'] text-sm text-[#191c1a]/60 dark:text-[#f2f4ef]/60 text-center">
-          © 2024 Worldcot International. All rights reserved.
-        </p>
-      </div>
-    </footer>
+        <div id="wc-spec-modal-body" class="p-6 space-y-6 overflow-auto h-[calc(100%-84px)]"></div>
+      </aside>
+    </div>
+
+    <div id="site-footer"></div>
+
+    <script src="/shared/site-chrome.js"></script>
     <script>
-      (() => {
-        const openBtn = document.getElementById("mobile-menu-open");
-        const menu = document.getElementById("mobile-menu");
-        const overlay = document.getElementById("mobile-menu-overlay");
-        const closeBtn = document.getElementById("mobile-menu-close");
+      window.WorldcotChrome?.mount({ active: "products" });
+    </script>
 
-        if (!openBtn || !menu || !overlay || !closeBtn) return;
+    <script>
+      (async () => {
+        const modal = document.getElementById("wc-spec-modal");
+        const overlay = document.getElementById("wc-spec-modal-overlay");
+        const closeBtn = document.getElementById("wc-spec-modal-close");
+        const titleEl = document.getElementById("wc-spec-modal-title");
+        const subtitleEl = document.getElementById("wc-spec-modal-subtitle");
+        const bodyEl = document.getElementById("wc-spec-modal-body");
+        const buttons = Array.from(document.querySelectorAll("[data-spec-button]"));
 
-        const setOpen = (isOpen) => {
-          menu.classList.toggle("hidden", !isOpen);
-          menu.setAttribute("aria-hidden", String(!isOpen));
-          openBtn.setAttribute("aria-expanded", String(isOpen));
-          document.documentElement.classList.toggle("overflow-hidden", isOpen);
+        if (!modal || !overlay || !closeBtn || !titleEl || !subtitleEl || !bodyEl || !buttons.length) return;
+
+        let cachedData = null;
+        async function getData() {
+          if (cachedData) return cachedData;
+          const res = await fetch("/data/products.json", { cache: "no-store" });
+          if (!res.ok) throw new Error("Failed to load products.json");
+          cachedData = await res.json();
+          return cachedData;
+        }
+
+        const open = () => {
+          modal.classList.remove("hidden");
+          modal.setAttribute("aria-hidden", "false");
+          document.documentElement.classList.add("wc-modal-open");
+        };
+        const close = () => {
+          modal.classList.add("hidden");
+          modal.setAttribute("aria-hidden", "true");
+          document.documentElement.classList.remove("wc-modal-open");
         };
 
-        openBtn.addEventListener("click", () => setOpen(true));
-        closeBtn.addEventListener("click", () => setOpen(false));
-        overlay.addEventListener("click", () => setOpen(false));
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") setOpen(false);
+        overlay.addEventListener("click", close);
+        closeBtn.addEventListener("click", close);
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") close();
         });
 
-        menu.querySelectorAll("a.mobile-menu-link").forEach((a) => {
-          a.addEventListener("click", () => setOpen(false));
-        });
+        const esc = (s) =>
+          String(s ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+
+        const specRows = (obj) => {
+          const entries = Object.entries(obj || {});
+          if (!entries.length) return `<p class="text-on-surface-variant text-sm">No specifications available.</p>`;
+          return `
+            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-4">
+              ${entries
+                .map(
+                  ([k, v]) => `
+                    <div class="flex items-start justify-between gap-6 py-2 border-b border-outline-variant/15 last:border-b-0">
+                      <div class="text-on-surface-variant">${esc(k)}</div>
+                      <div class="text-on-surface font-semibold text-right break-words max-w-[60%]">${esc(v)}</div>
+                    </div>
+                  `
+                )
+                .join("")}
+            </div>
+          `;
+        };
+
+        const renderCotton = (data) => {
+          const raw = (data.categories || []).find((c) => c.id === "raw-cotton");
+          const items = raw?.items || [];
+          titleEl.textContent = "Cotton specifications";
+          subtitleEl.textContent = "From our raw cotton catalog (grade, staple length, micronaire, etc.).";
+          bodyEl.innerHTML = items
+            .map((it) => {
+              const regions = (it.grownRegion || []).join(", ");
+              return `
+                <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div>
+                      <h3 class="font-headline text-xl text-primary font-bold">${esc(it.title || "")}</h3>
+                      <p class="text-on-surface-variant text-sm mt-2 leading-relaxed">${esc(it.summary || "")}</p>
+                    </div>
+                    <a class="shrink-0 inline-flex items-center gap-2 text-primary font-semibold hover:underline" href="/products/raw-cotton/">
+                      View page <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                  </div>
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+                    <div class="lg:col-span-1">
+                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Grown Region</div>
+                      <div class="text-on-surface font-semibold break-words">${esc(regions)}</div>
+                    </div>
+                    <div class="lg:col-span-2">
+                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Quality Specification</div>
+                      ${specRows(it.qualitySpecification || {})}
+                    </div>
+                  </div>
+                </section>
+              `;
+            })
+            .join("");
+        };
+
+        const renderYarn = (data) => {
+          const yarn = (data.categories || []).find((c) => c.id === "cotton-yarn");
+          const content = yarn?.content || {};
+          titleEl.textContent = "Yarn specifications";
+          subtitleEl.textContent = "Offerings and certification support from our cotton yarn catalog.";
+
+          const paragraphs = (content.paragraphs || []).slice(0, 2);
+          const offerings = content.offerings || [];
+
+          bodyEl.innerHTML = `
+            <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">${esc(content.title || "Cotton Yarn")}</h3>
+                <a class="inline-flex items-center gap-2 text-primary font-semibold hover:underline" href="/products/cotton-yarn/">
+                  View page <span class="material-symbols-outlined text-sm">chevron_right</span>
+                </a>
+              </div>
+              <div class="mt-4 space-y-3">
+                ${paragraphs.map((p) => `<p class="text-on-surface-variant text-sm leading-relaxed">${esc(p)}</p>`).join("")}
+              </div>
+            </section>
+
+            <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="font-headline text-xl text-primary font-bold">${esc(content.offeringsTitle || "Offerings")}</h3>
+              </div>
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                ${offerings
+                  .map(
+                    (o) => `
+                      <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-4">
+                        <p class="font-semibold text-primary">${esc(o)}</p>
+                      </div>
+                    `
+                  )
+                  .join("")}
+              </div>
+              ${
+                content.certifications
+                  ? `<p class="text-on-surface-variant text-sm leading-relaxed mt-5">${esc(content.certifications)}</p>`
+                  : ""
+              }
+            </section>
+          `;
+        };
+
+        async function handle(type) {
+          try {
+            const data = await getData();
+            if (type === "cotton") renderCotton(data);
+            if (type === "yarn") renderYarn(data);
+            open();
+          } catch (e) {
+            titleEl.textContent = "Specifications";
+            subtitleEl.textContent = "";
+            bodyEl.innerHTML = `<div class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6"><p class="text-on-surface-variant">Specifications data could not be loaded.</p></div>`;
+            open();
+          }
+        }
+
+        buttons.forEach((b) => b.addEventListener("click", () => handle(b.getAttribute("data-spec-button"))));
       })();
     </script>
   </body>

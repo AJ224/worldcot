@@ -94,159 +94,185 @@
       .manrope-body {
         font-family: "Manrope", sans-serif;
       }
+      @keyframes wc-cert-marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .wc-cert-marquee {
+        display: flex;
+        width: max-content;
+        animation: wc-cert-marquee 48s linear infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .wc-cert-marquee {
+          animation: none;
+        }
+      }
     </style>
   </head>
   <body
     class="bg-surface text-on-surface manrope-body selection:bg-primary-fixed selection:text-on-primary-fixed"
   >
-    <!-- TopNavBar -->
-    <header
-      class="bg-[#f8faf5]/80 dark:bg-[#191c1a]/80 backdrop-blur-md docked full-width top-0 sticky z-50 transition-all"
-    >
-      <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
-        <a class="flex items-center gap-4" href="/">
-          <span class="font-['Noto_Serif'] text-2xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]">
-            Worldcot International
-          </span>
-        </a>
-
-        <nav class="hidden md:flex items-center space-x-8">
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#2E4D23] dark:text-[#f2f4ef] border-b-2 border-[#2E4D23] pb-1 transition-colors duration-300"
-            href="/"
-            >Home</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/products/"
-            >Products</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/about/"
-            >About Us</a
-          >
-          <a
-            class="font-['Noto_Serif'] tracking-tight text-base text-[#191c1a]/70 dark:text-[#f2f4ef]/70 hover:text-[#2E4D23] transition-colors duration-300"
-            href="/contact/"
-            >Contact</a
-          >
-        </nav>
-
-        <div class="flex items-center gap-3">
-          <a
-            class="hidden md:inline-flex bg-primary-container text-on-primary px-6 py-2.5 rounded-md font-medium text-sm scale-95 active:opacity-80 transition-all"
-            href="/contact/"
-          >
-            Get Quote
-          </a>
-          <button
-            id="mobile-menu-open"
-            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface-container-lowest text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Open menu"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile sidebar -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] hidden md:hidden" aria-hidden="true">
-      <button
-        id="mobile-menu-overlay"
-        class="absolute inset-0 bg-black/40"
-        type="button"
-        aria-label="Close menu"
-      ></button>
-      <aside
-        class="absolute right-0 top-0 h-full w-[min(22rem,85vw)] bg-surface-container-lowest text-on-surface shadow-2xl border-l border-outline-variant/30"
-      >
-        <div class="p-6 flex items-center justify-between border-b border-outline-variant/20">
-          <a class="font-['Noto_Serif'] text-lg font-bold text-primary" href="/">Worldcot</a>
-          <button
-            id="mobile-menu-close"
-            class="inline-flex items-center justify-center w-11 h-11 rounded-md border border-outline-variant/40 bg-surface text-primary active:opacity-80 transition"
-            type="button"
-            aria-label="Close menu"
-          >
-            <span class="material-symbols-outlined">close</span>
-          </button>
-        </div>
-        <nav class="p-6 space-y-2">
-          <a class="mobile-menu-link block px-4 py-3 rounded-lg bg-surface-container-low text-primary font-semibold" href="/">Home</a>
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/products/"
-            >Products</a
-          >
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/about/"
-            >About Us</a
-          >
-          <a
-            class="mobile-menu-link block px-4 py-3 rounded-lg hover:bg-surface-container-low transition text-on-surface"
-            href="/contact/"
-            >Contact</a
-          >
-          <div class="pt-4">
-            <a class="mobile-menu-link block w-full text-center bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold" href="/contact/"
-              >Get Quote</a
-            >
-          </div>
-        </nav>
-      </aside>
-    </div>
+    <div id="site-navbar"></div>
 
     <main>
       <!-- Hero Section -->
-      <section class="relative min-h-[921px] flex items-center overflow-hidden pt-12 pb-24">
+      <section class="relative min-h-screen flex items-start overflow-hidden pt-24 md:pt-28 pb-24">
         <div class="absolute inset-0 z-0">
-          <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
-          <img
-            alt="Premium Cotton Heritage"
-            class="w-full h-full object-cover object-center"
-            data-alt="Close-up of high-quality raw cotton bolls in a sun-drenched field at harvest time with soft bokeh background"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4LAoA-TLLctpusRBd3oNxAEDtJMUY8Swzqx5_p0IgcVKsK4EmAGvG16LjTRouJIykeMO3coWFNqDZPTMW_RnNvPQEnuTyOwrP5WaMWENZyAKvqhjnqo7KhWa-DUq9fOf-Knzb28fyNdHhfYdQJupW_iCv1CpVmnRAcOvqgp7ZBHzlNVlhh6BTCbY9ZS2tyY-eMWw1kL5TrVzDRNZ9jEfV4uYL4ej9Lp_DzID2eH55vSOk_A9Cx8mHJsWYfEwmz5b6SuSWvhoDKos"
-          />
+          <video
+            class="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden pointer-events-none"
+            autoplay
+            muted
+            loop
+            playsinline
+            aria-hidden="true"
+          >
+            <source src="/bg_video.mp4" type="video/mp4" />
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10 pointer-events-none"></div>
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-8">
             <h1 class="text-6xl md:text-8xl font-headline font-bold text-primary tracking-tighter leading-[1.1]">
               25+ Years of <br /><span class="italic text-on-primary-container">Excellence</span> in Global Trade.
             </h1>
-            <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
-              Supplying premium cotton yarn, fabrics, agro-food, and essential raw materials to global markets with a
-              legacy of trust and sustainable sourcing.
-            </p>
             <div class="flex flex-wrap gap-4 pt-4">
               <a
                 class="bg-primary text-on-primary px-8 py-4 rounded-md font-semibold text-base flex items-center gap-3 transition-transform hover:translate-y-[-2px] shadow-lg shadow-primary/10"
                 href="/products/"
               >
-                Explore Commodities
+                Explore Products
                 <span class="material-symbols-outlined">arrow_forward</span>
               </a>
               <a
                 class="bg-surface-container-highest text-primary px-8 py-4 rounded-md font-semibold text-base transition-colors hover:bg-surface-variant"
                 href="/about/"
               >
-                Learn More
+                Our Story
               </a>
             </div>
           </div>
         </div>
-        <div class="absolute right-0 bottom-0 w-1/3 opacity-10 pointer-events-none translate-x-1/4 translate-y-1/4 rotate-12">
-          <img
-            alt="Cotton motif"
-            class="w-full grayscale contrast-125"
-            data-alt="Minimalist line art illustration of a cotton plant branch with soft organic curves on a transparent background"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZBp4C1wc2fOj8X4eQGuxyzA-6G9UJrO92BqZxM9b0xDO36R2Os4S4rQpj6pxPSfHG5GB7aEm75dxHtxk8z1F0Dh3h5Uh9ZtN5ykuw1wSl8EcyKK1M3Bi2O4-OwTxSYQrrAtCg4Y3hNCetgKgtLdQvOb1M-po5u2dQ71-JQTkPRU8toegOz9pAK_ex7qaKLFYDVjYNUBltBLXi95Y16tNi3B06RG3Nb3JKLrjnfJrNDXC-CZgntNruoC7HT-XEV2K1_yOGZ75WsWc"
-          />
+      </section>
+
+      <!-- Who We Are -->
+      <section class="py-20 md:py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="text-center mb-14">
+            <h2 class="text-5xl md:text-6xl font-headline font-bold text-primary tracking-tight">
+              WHO WE ARE
+            </h2>
+            <p class="text-on-surface-variant text-lg max-w-3xl mx-auto leading-relaxed mt-6">
+              Worldcot connects origin to destination with disciplined sourcing, transparent documentation, and
+              execution that keeps your supply chain predictable.
+            </p>
+          </div>
+
+          <!-- 01 / 02 / 03 narrative cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+            <article class="rounded-xl bg-surface-container-low border border-outline-variant/20 p-7">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-primary font-bold tracking-widest text-xs">01</span>
+                <span class="material-symbols-outlined text-primary/70">verified</span>
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary mb-3">Quality-first sourcing</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                We match specification to end-use, verify grades, and keep quality consistent across lots—so you can
+                plan production with confidence.
+              </p>
+            </article>
+
+            <article class="rounded-xl bg-surface-container-low border border-outline-variant/20 p-7">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-primary font-bold tracking-widest text-xs">02</span>
+                <span class="material-symbols-outlined text-primary/70">handshake</span>
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary mb-3">Relationship-led execution</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                Long-term partnerships with ginners, mills, and logistics providers help us move fast, resolve issues
+                early, and keep timelines steady.
+              </p>
+            </article>
+
+            <article class="rounded-xl bg-surface-container-low border border-outline-variant/20 p-7">
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-primary font-bold tracking-widest text-xs">03</span>
+                <span class="material-symbols-outlined text-primary/70">public</span>
+              </div>
+              <h3 class="text-xl font-headline font-bold text-primary mb-3">Global coverage, practical scale</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">
+                From sampling to bulk supply, we support repeat buying with clear paperwork, compliant shipments, and
+                dependable communication.
+              </p>
+            </article>
+          </div>
+
+          <!-- Pillars + quote -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch mb-12">
+            <div class="lg:col-span-7 rounded-xl bg-surface-container-low border border-outline-variant/20 p-7">
+              <h3 class="text-2xl font-headline font-bold text-primary mb-6">The pillars buyers rely on</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div class="rounded-lg bg-surface-container-lowest border border-outline-variant/15 p-5">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">fact_check</span>
+                    <p class="font-bold text-primary">Quality assurance</p>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Clear specs, pre-shipment checks, and traceable lots—so what you receive matches what you ordered.
+                  </p>
+                </div>
+                <div class="rounded-lg bg-surface-container-lowest border border-outline-variant/15 p-5">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">group</span>
+                    <p class="font-bold text-primary">Strong partnerships</p>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Trusted supplier networks that improve availability, pricing stability, and on-time dispatch.
+                  </p>
+                </div>
+                <div class="rounded-lg bg-surface-container-lowest border border-outline-variant/15 p-5">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">insights</span>
+                    <p class="font-bold text-primary">Market intelligence</p>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Practical guidance on seasonality, origin shifts, and demand—so you buy at the right time.
+                  </p>
+                </div>
+                <div class="rounded-lg bg-surface-container-lowest border border-outline-variant/15 p-5">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1">inventory_2</span>
+                    <p class="font-bold text-primary">Reliable scale</p>
+                  </div>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Repeatable processes for documentation, packing, and logistics—built for consistent monthly flows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 rounded-xl bg-primary-container border border-outline-variant/20 p-7 flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-primary-container/80 mb-5">Vision</p>
+                <blockquote class="text-2xl md:text-3xl font-headline font-bold text-on-primary leading-snug">
+                  “To be a trusted global partner in trade by delivering consistent quality, transparent dealings, and
+                  long-term value for every buyer we serve.”
+                </blockquote>
+              </div>
+              <div class="mt-8 flex items-center justify-between gap-4">
+                <p class="text-on-primary-container/80 text-sm">Worldcot International</p>
+                <a
+                  class="inline-flex items-center gap-2 bg-white/10 text-on-primary px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-white/15 transition"
+                  href="/about/"
+                >
+                  Read more
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -255,7 +281,7 @@
         <div class="max-w-7xl mx-auto px-8">
           <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div class="max-w-2xl">
-              <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">Our Expertise</h2>
+              <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-6">Our Products</h2>
               <p class="text-on-surface-variant text-lg">
                 We manage the complete value chain of natural fibers and agricultural products, ensuring rigorous
                 quality control from farm to factory.
@@ -269,214 +295,279 @@
 
           <!-- Bento Grid of Products -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px]">
+            <a
+              class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px] block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-low"
+              href="/products/raw-cotton/"
+            >
               <img
-                alt="Raw Cotton"
+                alt=""
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Bales of premium raw white cotton stacked in a clean modern warehouse with soft natural light"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuzFwKK1cZZUkVPu_LqZSI32O7BFhw1gWxxQxskWf0fMjwlBtfcfb1NgAqMbXFSXv4wI1hZMDKMJeYYudOLjyj1MAicQkmFUQTmSRzmg3CW-LfyfvTNHWbT9fZgDWPduasp1wbgS-tN2UpKPlcbN1_N7J7Rt-XgilfPVL0DOPIc0Kc-Bu5byPJoruYfi4JzVqEBoFs2fjxEvueE2ROkBavEteTY-JM_sLCrS4XcaK3UqIdwhEGGmRLjm-oz8sSAogkGcne8XbbTx8"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
               <div class="absolute bottom-0 left-0 p-8 w-full">
-                <span class="text-on-primary-container font-bold tracking-widest uppercase text-xs mb-3 block"
-                  >Primary Commodity</span
                 >
-                <h3 class="text-3xl font-headline font-bold text-on-primary mb-2">Raw Cotton</h3>
-                <p class="text-on-primary/80 max-w-md text-sm leading-relaxed mb-6">
-                  High-grade fibers sourced from the world's most fertile regions, categorized by micronaire, length,
-                  and strength.
-                </p>
-                <a
-                  class="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-white/20 transition-all"
-                  href="/contact/"
-                  >Request Details</a
-                >
+                <h3 class="text-3xl font-headline font-bold text-on-primary">Raw Cotton</h3>
               </div>
-            </div>
+            </a>
 
-            <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px]">
+            <a
+              class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[450px] block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-low"
+              href="/products/cotton-yarn/"
+            >
               <img
-                alt="Cotton Yarn"
+                alt=""
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Spools of fine white cotton yarn arranged symmetrically on a textile mill production line"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9tUUNLqMwGufhiBkpHvf8GBwH505H4GF5Zi11c6S_zqhugyDamgKsG5xJnsZ8oUqyMGG792Ec6GPNN-oJfVtPDMvrm0zEWGl_YIRPHR00IJepWY-E4EP2p--F65i_gGEYXfewEZ5GnDXo_kMVR9phjmjbZPEgf8d-PEDRLUCj6jEVKlVh5vd6onnyWm67oxPxuLI9jr61KIj0GRTCD-oZ5LXvVNJ3jLAG2IOcBfFS1iyH1houFbXgVFwwT9Ixsf_rytrOtuE4eds"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
               <div class="absolute bottom-0 left-0 p-8">
-                <h3 class="text-2xl font-headline font-bold text-on-primary mb-2">Cotton Yarn</h3>
-                <p class="text-on-primary/80 text-sm">Superior weaving and knitting yarns.</p>
+                <h3 class="text-2xl font-headline font-bold text-on-primary">Cotton Yarn</h3>
               </div>
-            </div>
+            </a>
 
-            <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
+            <a
+              class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px] block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-low"
+              href="/products/#textile"
+            >
               <div class="absolute inset-0 bg-secondary/10 group-hover:bg-secondary/20 transition-colors"></div>
               <img
-                alt="Fabrics"
+                alt=""
                 class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
                 data-alt="Macro texture of premium woven cotton fabric with intricate thread patterns and soft neutral tones"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq88___BZHgXBOIH1Bfc_gUF9D1XpvhxiBEy1KNyZhFLo3UBFb3JGbLykggIg4TS3XWfT-ZUSZpMiUFl-u-d9e5WBwfHJTwj31DVhlghvsC-bmhS4bmLSO1A-tUUmPCJz9agQOuMruBNojgOfuYT2Y8euzCnUfKxY9wTps5x_YBcnWFNvlLHu6j3gdeNFhdj3o59c1VRiYEYUdfHR7lQ9H679B7UmZx9CG3oB50vKKF81SQTnh5S5BWcUrTFos8j-f7OL-JZOgyYI"
               />
               <div class="absolute inset-0 flex flex-col justify-end p-8">
-                <h3 class="text-xl font-headline font-bold text-primary mb-1">Fabrics</h3>
-                <p class="text-on-surface-variant text-sm">Industrial and garment grade textiles.</p>
+                <h3 class="text-xl font-headline font-bold text-primary">Fabrics</h3>
               </div>
-            </div>
+            </a>
 
-            <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
+            <a
+              class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px] block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-low"
+              href="/products/agri-products/"
+            >
               <img
-                alt="Agro & Food"
+                alt=""
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-alt="Artisanal display of agricultural grains and seeds in wooden bowls representing high-quality agro-food exports"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwHoZzJDZwoYWzcvYfYCdz_u4lMY4TO7uzQJjEdSt8tDgu6uY3iYxjw4uSwV_uPjmLEgJsI8VcSDalNCEHZswIK7C-LdtfSdDnBtuPy98AmCGIxmPoSMnF32Vi3hWOb19jvMER8n6A0DpPz7LdW4G9irVzT_crLkIUMy2YPhGvfqvVpB7Mqz4RAUrW2X58CN5QluOpsQSXM4bcsEQ0dZMs8yihk8pm3zeRWmhFzUBh1eL3LMKvwhvL-j1Z-42nARzO32r3KUucx-Y"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-[#4d1f38]/90 via-transparent to-transparent"></div>
               <div class="absolute bottom-0 left-0 p-8">
-                <h3 class="text-xl font-headline font-bold text-on-primary mb-1">Agro & Food</h3>
-                <p class="text-on-primary/80 text-sm">Grains, pulses, and oilseeds.</p>
+                <h3 class="text-xl font-headline font-bold text-on-primary">Agro & Food</h3>
               </div>
-            </div>
+            </a>
 
-            <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px]">
-              <div class="p-8 h-full flex flex-col justify-between border-2 border-dashed border-outline-variant/30">
+            <a
+              class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest h-[350px] block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-low"
+              href="/products/cotton-waste/"
+            >
+              <div class="p-8 h-full flex flex-col justify-between border-2 border-dashed border-outline-variant/30 group-hover:border-primary/30 transition-colors">
                 <div>
                   <span
                     class="material-symbols-outlined text-primary text-4xl mb-4"
                     style="font-variation-settings: 'FILL' 1"
                     >recycling</span
                   >
-                  <h3 class="text-xl font-headline font-bold text-primary mb-2">Cotton Waste</h3>
-                  <p class="text-on-surface-variant text-sm leading-relaxed">
-                    Sustainable byproduct solutions for industrial cleaning, papermaking, and non-woven manufacturing.
-                  </p>
+                  <h3 class="text-xl font-headline font-bold text-primary">Cotton Waste</h3>
                 </div>
                 <div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest">
                   Sustainability Focus
                   <span class="material-symbols-outlined text-sm">eco</span>
                 </div>
               </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Offerings -->
+      <section
+        class="border-y border-outline-variant/20 bg-surface-container-low py-12 md:py-14"
+        aria-label="Certifications and memberships"
+      >
+        <div class="max-w-7xl mx-auto px-8 mb-8 text-center">
+          <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">Our Offerings</h2>
+          <p class="text-on-surface-variant text-lg">Certifications &amp; memberships that support buyer confidence.</p>
+        </div>
+        <div class="overflow-hidden">
+          <div class="wc-cert-marquee hover:[animation-play-state:paused]">
+            <div class="flex items-center gap-12 md:gap-16 px-6 md:px-10 shrink-0" aria-hidden="false">
+              <img
+                alt="OCS — Organic Content Standard"
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/OCS-Logo.png"
+                loading="lazy"
+              />
+              <img
+                alt="GOTS"
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/gots%20logo-d94dd9af.webp"
+                loading="lazy"
+              />
+              <img
+                alt="Better Cotton"
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/bc_logo_2025.svg"
+                loading="lazy"
+              />
+              <img
+                alt="Textiles Committee"
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/Textiles_Committee_Logo-1.png"
+                loading="lazy"
+              />
+              <img
+                alt="TEXPROCIL"
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/TEXPROCIL-Logo.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="GCCI"
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/gcci%20logo.jpg"
+                loading="lazy"
+              />
+              <img
+                alt="Primark"
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/Primark+Logo.webp"
+                loading="lazy"
+              />
+              <img
+                alt="International Cotton Association"
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/international-cotton-association.png"
+                loading="lazy"
+              />
             </div>
+            <div class="flex items-center gap-12 md:gap-16 px-6 md:px-10 shrink-0" aria-hidden="true">
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/OCS-Logo.png"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/gots%20logo-d94dd9af.webp"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/bc_logo_2025.svg"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/Textiles_Committee_Logo-1.png"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/TEXPROCIL-Logo.jpg"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/gcci%20logo.jpg"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[140px] object-contain opacity-100"
+                src="/certification/Primark+Logo.webp"
+                loading="lazy"
+              />
+              <img
+                alt=""
+                class="h-11 md:h-14 w-auto max-w-[160px] object-contain opacity-100"
+                src="/certification/international-cotton-association.png"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="py-20 md:py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">Global footprint</h2>
+            <p class="text-on-surface-variant text-lg max-w-3xl mx-auto">
+              Click a highlighted country to view more details.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-outline-variant/20 bg-surface-container-low p-5 md:p-8">
+            <div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/15">
+              <div id="wc-world-map" class="w-full"></div>
+            </div>
+          </div>
+
+          <div
+            id="wc-country-details"
+            class="hidden fixed inset-0 z-[80]"
+            aria-hidden="true"
+          >
+            <button
+              class="absolute inset-0 bg-black/35"
+              type="button"
+              data-role="close"
+              aria-label="Close"
+            ></button>
+            <aside
+              class="absolute right-0 top-0 h-full w-[min(34rem,92vw)] bg-surface-container-lowest border-l border-outline-variant/25 shadow-2xl"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Country details"
+            >
+              <div class="p-6 border-b border-outline-variant/15 flex items-start justify-between gap-4">
+                <div>
+                  <p data-role="title" class="font-headline font-bold text-primary text-2xl"></p>
+                  <p data-role="subtitle" class="text-on-surface-variant text-sm mt-1"></p>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-outline-variant/30 bg-surface text-primary"
+                  type="button"
+                  data-role="close"
+                  aria-label="Close"
+                >
+                  <span class="material-symbols-outlined">close</span>
+                </button>
+              </div>
+              <div class="p-6 space-y-8 overflow-auto h-[calc(100%-84px)]">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant">Highlights</p>
+                  <ul data-role="notes" class="mt-4 space-y-3"></ul>
+                </div>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant">More data</p>
+                  <div data-role="metrics" class="mt-4"></div>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[#f2f4ef] dark:bg-[#191c1a]">
-      <div
-        class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Manrope'] text-sm leading-relaxed text-[#2E4D23] dark:text-[#f2f4ef]"
-      >
-        <div class="space-y-6">
-          <span class="font-['Noto_Serif'] text-xl font-bold text-[#2E4D23] dark:text-[#f2f4ef]"
-            >Worldcot International</span
-          >
-          <p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            Your global partner in premium natural fibers and agricultural trade excellence for over two decades.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h6 class="font-bold uppercase tracking-widest text-xs">Navigation</h6>
-          <ul class="space-y-2">
-            <li>
-              <a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4" href="/"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4"
-                href="/products/"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4"
-                href="/about/"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4"
-                href="/contact/"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="space-y-4">
-          <h6 class="font-bold uppercase tracking-widest text-xs">Legal & Info</h6>
-          <ul class="space-y-2">
-            <li>
-              <a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4" href="#"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4" href="#"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4" href="#"
-                >Sustainability Report</a
-              >
-            </li>
-            <li>
-              <a class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 hover:underline decoration-1 underline-offset-4" href="#"
-                >Sitemap</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="space-y-6">
-          <h6 class="font-bold uppercase tracking-widest text-xs">Contact Headquarters</h6>
-          <p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60">
-            Trade District Center, Floor 24<br />
-            International Commerce Zone<br />
-            worldcottradingcorpm@gmail.com
-          </p>
-          <div class="flex gap-4">
-            <span class="material-symbols-outlined text-primary cursor-pointer">public</span>
-            <span class="material-symbols-outlined text-primary cursor-pointer">mail</span>
-            <span class="material-symbols-outlined text-primary cursor-pointer">corporate_fare</span>
-          </div>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-8 py-8 border-t border-outline-variant/10 text-center">
-        <p class="text-[#191c1a]/60 dark:text-[#f2f4ef]/60 text-xs uppercase tracking-widest font-medium">
-          © 2024 Worldcot International. All rights reserved.
-        </p>
-      </div>
-    </footer>
+    <div id="site-footer"></div>
+
+    <script src="/shared/site-chrome.js"></script>
     <script>
-      (() => {
-        const openBtn = document.getElementById("mobile-menu-open");
-        const menu = document.getElementById("mobile-menu");
-        const overlay = document.getElementById("mobile-menu-overlay");
-        const closeBtn = document.getElementById("mobile-menu-close");
-
-        if (!openBtn || !menu || !overlay || !closeBtn) return;
-
-        const setOpen = (isOpen) => {
-          menu.classList.toggle("hidden", !isOpen);
-          menu.setAttribute("aria-hidden", String(!isOpen));
-          openBtn.setAttribute("aria-expanded", String(isOpen));
-          document.documentElement.classList.toggle("overflow-hidden", isOpen);
-        };
-
-        openBtn.addEventListener("click", () => setOpen(true));
-        closeBtn.addEventListener("click", () => setOpen(false));
-        overlay.addEventListener("click", () => setOpen(false));
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") setOpen(false);
-        });
-
-        menu.querySelectorAll("a.mobile-menu-link").forEach((a) => {
-          a.addEventListener("click", () => setOpen(false));
-        });
-      })();
+      window.WorldcotChrome?.mount({ active: "home" });
     </script>
+    <script type="module" src="/shared/world-map.js"></script>
   </body>
 </html>
 

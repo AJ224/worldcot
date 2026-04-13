@@ -1,0 +1,181 @@
+{
+  "navigation": {
+    "productsHomeLabel": "Products",
+    "homeLabel": "Home"
+  },
+  "categories": [
+    {
+      "id": "raw-cotton",
+      "title": "Raw Cotton",
+      "description": "World-famous cotton varieties with detailed specifications and origin regions.",
+      "href": "/products/raw-cotton/",
+      "items": [
+        {
+          "id": "shankar-6",
+          "title": "SHANKAR 6 COTTON",
+          "summary": "World-famous medium staple cotton variety, mostly suitable for knitting (hosiery) yarn due to higher water absorbency. Suitable to produce yarn up to 40s count.",
+          "grownRegion": ["Saurashtra", "Kutch", "North Gujarat", "Central Gujarat", "South Gujarat"],
+          "qualitySpecification": {
+            "Grade": "A Grade (Contamination Control)",
+            "Staple Length": "29-29.5 mm",
+            "Strength": "30+ gpt",
+            "Micronaire": "3.8-4.5 mic ncl",
+            "Trash": "2.5%",
+            "RD": "77+",
+            "SFI": "Less than 8%",
+            "Colour Grade": "21-1 to 31-1",
+            "Moisture": "8.5-9%"
+          }
+        },
+        {
+          "id": "mcu-5",
+          "title": "MCU5 COTTON",
+          "summary": "Long Staple Cotton Variety suitable for Weaving Fine Count Yarn. Suitable to produce yarn from 40s to 60s count.",
+          "grownRegion": ["Maharashtra", "Telangana", "A.P.", "Odisha"],
+          "qualitySpecification": {
+            "Grade": "A Grade (Contamination Control)",
+            "Staple Length": "30.5-31 mm",
+            "Strength": "31+ gpt",
+            "Micronaire": "3.8-4.5 mic ncl",
+            "Trash": "3%",
+            "RD": "77+",
+            "SFI": "Less than 8%",
+            "Colour Grade": "21-1 to 31-1",
+            "Moisture": "8.5-9%"
+          }
+        },
+        {
+          "id": "dch-32",
+          "title": "DCH 32 COTTON",
+          "summary": "Extra Long Staple Cotton Variety compared with US PIMA and Egyptian Giza. Suitable to produce high yarn count from 80s to 120s range.",
+          "grownRegion": ["Madhya Pradesh", "Karnataka"],
+          "qualitySpecification": {
+            "Grade": "A Grade (Contamination Control)",
+            "Staple Length": "35-36 mm",
+            "Strength": "35+ gpt",
+            "Micronaire": "3.2-3.6 mic ncl",
+            "Trash": "3.5-4%",
+            "RD": "72-75",
+            "SFI": "Less than 8%",
+            "Colour Grade": "31-1 to 31-3",
+            "Moisture": "8.5-9%"
+          }
+        },
+        {
+          "id": "mech-1-bunny",
+          "title": "MECH 1 / BUNNY COTTON",
+          "summary": "Medium Staple Cotton Variety suitable to produce weaving yarn count up to 40s.",
+          "grownRegion": ["Maharashtra", "Madhya Pradesh", "Karnataka"],
+          "qualitySpecification": {
+            "Grade": "A Grade (Contamination Control)",
+            "Staple Length": "28.5-29.5 mm",
+            "Strength": "29+ gpt",
+            "Micronaire": "3.5-4.5 mic ncl",
+            "Trash": "3-3.5%",
+            "RD": "75+",
+            "SFI": "Less than 9%",
+            "Colour Grade": "31-1 to 31-3",
+            "Moisture": "8.5-9%"
+          }
+        },
+        {
+          "id": "j-34",
+          "title": "J 34 COTTON",
+          "summary": "Medium Staple Cotton Variety suitable to produce weaving yarn count from 20s to 34s. Harvest starts early (Aug–Sep) in North India.",
+          "grownRegion": ["Haryana", "Punjab", "Rajasthan"],
+          "qualitySpecification": {
+            "Staple Length": "27.5-28.5 mm",
+            "Strength": "28+ gpt",
+            "Micronaire": "3.5-4.5 mic ncl",
+            "Trash": "4-4.5%",
+            "RD": "75+",
+            "SFI": "Less than 10%",
+            "Colour Grade": "31-1 to 31-3",
+            "Moisture": "8.5-9%"
+          }
+        },
+        {
+          "id": "v-797",
+          "title": "V 797 COTTON",
+          "summary": "Short Staple coarse cotton variety suitable for Open End Denim Yarn count up to 20s. Small crop size (2.5–3 lakh bales/year).",
+          "grownRegion": ["North Gujarat", "Saurashtra"],
+          "qualitySpecification": {
+            "Staple Length": "22-23 mm",
+            "Strength": "20+ gpt",
+            "Micronaire": "5.0-5.8 mic ncl",
+            "Trash": "13-15%",
+            "RD": "68-72+",
+            "SFI": "Up to 13%",
+            "Colour Grade": "41-1 to 41-3",
+            "Moisture": "8.5-9%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cotton-yarn",
+      "title": "Cotton Yarn",
+      "description": "100% cotton yarn range from 20s to 100s, including carded, combed, compact and sustainable certified yarns.",
+      "href": "/products/cotton-yarn/",
+      "content": {
+        "title": "COTTON YARN",
+        "paragraphs": [
+          "We export the complete range of 100% cotton yarn from India to all international markets – supplying up to 2000 tons of cotton yarn, including carded, combed and compact variety from count range 20's to 100's. This precision and value in our delivery is made possible by a professional workforce which brings rich global experience, keen market insight and a clear understanding of customer needs.",
+          "Our yarns are made from the best quality fiber in the most advanced spinning mill unit. The process of mercerization is further used to strengthen our cotton yarns. Highly water-absorbent, soft, and obtained from authentic Indian cotton, our cotton yarn is competitively priced and gives the buyer the best value for money.",
+          "Our yarns are mainly exported to countries like China, Korea, Bangladesh, Egypt, Taiwan, Hong Kong, Turkey, Japan, Israel, European Union and Mauritius."
+        ],
+        "offeringsTitle": "Offering Cotton Yarn (Single / Double)",
+        "offerings": [
+          "Combed Hosiery",
+          "Combed Weaving",
+          "Compact Weaving",
+          "Carded Weaving",
+          "Carded Hosiery",
+          "Open End Yarn",
+          "Denim Yarn"
+        ],
+        "certifications": "Offering all sustainable certified yarn like Organic, BCI, GRS, IKEA, Primark etc."
+      }
+    },
+    {
+      "id": "cotton-waste",
+      "title": "Cotton Waste",
+      "description": "Contamination-free cotton waste products for open end spinning and recycling applications.",
+      "href": "/products/cotton-waste/",
+      "content": {
+        "title": "Cotton Waste",
+        "paragraphs": [
+          "We are sourcing cotton waste from renowned spinning mills and undergoing various processes with strict quality control in a modern factory to produce contamination free cotton waste.",
+          "We offer products with quality, purity and longevity as well as recyclable nature. The company emphasizes a strong business network and supplies cotton waste products in specifications required by clients all over the world."
+        ],
+        "sections": [
+          {
+            "title": "Cotton Waste For Open End Spinning Mill",
+            "items": [
+              { "name": "Comber Noil", "spec": "Staple Length: 19-20 mm / Strength: 18+ gpt / Mic: 2.8 to 3.5 / Trash: 0-0.05%" },
+              { "name": "Flat Strips Cotton Waste", "spec": "Staple Length: 24-25 mm / Mic: 3.2 to 3.5 / Trash: 8-12%" },
+              { "name": "Lickerin Cotton Waste", "spec": "Staple Length: 24-25 mm / Mic: 3.2 to 3.8 / Trash: 30-35%" },
+              { "name": "Recycle Process Cotton", "spec": "Staple Length: 23-25 mm / Mic: 3.2 to 3.5 / Trash: 12-15%" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "agri-products",
+      "title": "Agri Products",
+      "description": "Bulk agro commodities sourced for global trade.",
+      "href": "/products/agri-products/",
+      "items": [
+        { "id": "maize", "title": "Maize" },
+        { "id": "sugar", "title": "Sugar" },
+        { "id": "rice", "title": "Rice" },
+        { "id": "spices", "title": "Spices" },
+        { "id": "red-chilly", "title": "Red Chilly" },
+        { "id": "turmeric", "title": "Turmeric" }
+      ]
+    }
+  ],
+  "contactEmail": "worldcottradingcorpm@gmail.com"
+}
+

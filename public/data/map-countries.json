@@ -1,0 +1,109 @@
+{
+  "highlights": [
+    {
+      "iso3": "NGA",
+      "name": "Nigeria",
+      "region": "West Africa",
+      "notes": ["Regional buying support across West Africa", "Documentation-first execution for smooth clearance"],
+      "metrics": { "Coverage": "West Africa", "Support": "Dispatch coordination + updates" }
+    },
+    {
+      "iso3": "KEN",
+      "name": "Kenya",
+      "region": "East Africa",
+      "notes": ["Regional buying support across East Africa", "Consistent lots and clear paperwork"],
+      "metrics": { "Coverage": "East Africa", "Focus": "Consistency + documentation" }
+    },
+    {
+      "iso3": "IND",
+      "name": "India",
+      "region": "South Asia",
+      "notes": [
+        "Source-focused trade execution with clear documentation",
+        "Cotton, yarn, fabrics, and agro categories"
+      ],
+      "metrics": {
+        "Lead time": "Depends on product & shipment mode",
+        "Documents": "Invoice, packing list, COA/COO as required"
+      }
+    },
+    {
+      "iso3": "PAK",
+      "name": "Pakistan",
+      "region": "South Asia",
+      "notes": ["Specification-led buying support", "Predictable documentation and dispatch flow"],
+      "metrics": { "Focus": "Quality + paperwork clarity" }
+    },
+    {
+      "iso3": "BGD",
+      "name": "Bangladesh",
+      "region": "South Asia",
+      "notes": ["Textile market support with spec discipline", "Buyer updates across shipment milestones"],
+      "metrics": { "Support": "Documentation + dispatch coordination" }
+    },
+    {
+      "iso3": "IDN",
+      "name": "Indonesia",
+      "region": "Southeast Asia",
+      "notes": ["Repeat-buy support with consistent lots", "Clear, complete documentation for smooth clearance"],
+      "metrics": { "Focus": "Consistency + documentation" }
+    },
+    {
+      "iso3": "VNM",
+      "name": "Vietnam",
+      "region": "Southeast Asia",
+      "notes": ["Spec-driven sourcing and repeatable quality", "Responsive communication and shipment updates"],
+      "metrics": { "Support": "Buyer updates + paperwork" }
+    },
+    {
+      "iso3": "CHN",
+      "name": "China",
+      "region": "East Asia",
+      "notes": ["Bulk trade execution with documentation discipline", "Reliable shipment coordination"],
+      "metrics": { "Focus": "Scale + paperwork" }
+    },
+    {
+      "iso3": "ARE",
+      "name": "UAE",
+      "region": "Middle East",
+      "notes": ["Fast turnaround for regional buying hubs", "Consistent monthly supply planning"],
+      "metrics": { "Support": "Buyer updates + dispatch coordination" }
+    },
+    {
+      "iso3": "GBR",
+      "name": "United Kingdom",
+      "region": "Europe",
+      "notes": ["Spec-driven sourcing with compliant paperwork", "Repeatable lots and traceability"],
+      "metrics": { "Focus": "Consistency + documentation" }
+    },
+    {
+      "iso3": "DEU",
+      "name": "Germany",
+      "region": "Europe",
+      "notes": ["Quality-first shipments for industrial buyers", "Clear specs and lot discipline"],
+      "metrics": { "Focus": "Quality assurance" }
+    },
+    {
+      "iso3": "USA",
+      "name": "United States",
+      "region": "North America",
+      "notes": ["Reliable dispatch support and documentation", "Responsive communication"],
+      "metrics": { "Support": "Shipment milestones + paperwork" }
+    },
+    {
+      "iso3": "AUS",
+      "name": "Australia",
+      "region": "Oceania",
+      "notes": ["Trade support for buyers across Australia", "Clear specs and documentation-first execution"],
+      "metrics": { "Focus": "Documentation + timelines" }
+    },
+    {
+      "iso3": "BRA",
+      "name": "Brazil",
+      "region": "South America",
+      "notes": ["Coverage for South American buying flows", "Consistent communication and paperwork"],
+      "metrics": { "Coverage": "South America", "Support": "Documentation + dispatch" }
+    }
+  ]
+}
+
