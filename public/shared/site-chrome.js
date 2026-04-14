@@ -142,7 +142,7 @@
 
         <div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/15 text-center">
           <p class="text-white/70 text-xs uppercase tracking-widest font-medium">
-            © 2024 Worldcot International. All rights reserved.
+            © 2026 Worldcot International. All rights reserved.
           </p>
         </div>
       </footer>
