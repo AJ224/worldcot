@@ -5,7 +5,7 @@
     { key: "home", label: "Home", href: "/" },
     { key: "about", label: "About Us", href: "/about/" },
     { key: "services", label: "Services", href: "/services/" },
-    { key: "products", label: "Product", href: "/products/" },
+    { key: "products", label: "Products", href: "/products/" },
     { key: "contact", label: "Contact", href: "/contact/" }
   ];
 
@@ -92,37 +92,37 @@
 
   function renderFooter() {
     return `
-      <footer class="bg-[#f2f4ef]">
+      <footer class="bg-primary text-white">
         <div class="max-w-7xl mx-auto px-8 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
           <div class="space-y-5">
             <a class="flex items-center gap-3" href="/">
               <img src="${LOGO_SRC}" alt="Worldcot logo" class="h-12 w-12 object-contain" loading="lazy" />
-              <span class="font-['Noto_Serif'] text-xl font-bold text-[#2E4D23]">Worldcot International</span>
+              <span class="font-['Noto_Serif'] text-xl font-bold text-white">Worldcot International</span>
             </a>
-            <p class="text-[#191c1a]/60 text-sm leading-relaxed max-w-sm">
+            <p class="text-white/80 text-sm leading-relaxed max-w-sm">
               Global trade partner for premium natural fibers and agricultural commodities—built on clarity, reliability, and fair dealing.
             </p>
           </div>
 
           <div class="space-y-4">
-            <h6 class="font-bold uppercase tracking-widest text-xs text-[#2E4D23]">Company</h6>
+            <h6 class="font-bold uppercase tracking-widest text-xs text-white/90">Company</h6>
             <ul class="space-y-2 text-sm">
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/about/">About Us</a></li>
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/services/">Services</a></li>
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/products/">Products</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/about/">About Us</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/services/">Services</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/products/">Products</a></li>
             </ul>
           </div>
 
           <div class="space-y-4">
-            <h6 class="font-bold uppercase tracking-widest text-xs text-[#2E4D23]">Get in touch</h6>
+            <h6 class="font-bold uppercase tracking-widest text-xs text-white/90">Get in touch</h6>
             <ul class="space-y-2 text-sm">
               <li>
-                <a class="text-[#191c1a]/60 hover:underline break-all" href="mailto:worldcottradingcorpm@gmail.com">
-                  worldcottradingcorpm@gmail.com
+                <a class="text-white/80 hover:text-white hover:underline break-all" href="mailto:worldcottradingcorp@gmail.com">
+                  worldcottradingcorp@gmail.com
                 </a>
               </li>
               <li>
-                <a class="text-[#191c1a]/60 hover:underline" href="/contact/">
+                <a class="text-white/80 hover:text-white hover:underline" href="/contact/">
                   Contact form / Enquire Now
                 </a>
               </li>
@@ -130,18 +130,18 @@
           </div>
 
           <div class="space-y-4">
-            <h6 class="font-bold uppercase tracking-widest text-xs text-[#2E4D23]">Quick links</h6>
+            <h6 class="font-bold uppercase tracking-widest text-xs text-white/90">Quick links</h6>
             <ul class="space-y-2 text-sm">
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/">Home</a></li>
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/products/raw-cotton/">Raw Cotton</a></li>
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/products/cotton-yarn/">Cotton Yarn</a></li>
-              <li><a class="text-[#191c1a]/60 hover:underline" href="/products/cotton-waste/">Cotton Waste</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/">Home</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/products/raw-cotton/">Raw Cotton</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/products/cotton-yarn/">Cotton Yarn</a></li>
+              <li><a class="text-white/80 hover:text-white hover:underline" href="/products/cotton-waste/">Cotton Waste</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-outline-variant/10 text-center">
-          <p class="text-[#191c1a]/60 text-xs uppercase tracking-widest font-medium">
+        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/15 text-center">
+          <p class="text-white/70 text-xs uppercase tracking-widest font-medium">
             © 2024 Worldcot International. All rights reserved.
           </p>
         </div>

@@ -111,7 +111,7 @@
   <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
     <div id="site-navbar"></div>
 
-    <main class="max-w-7xl mx-auto px-8 py-16">
+    <main class="max-w-7xl mx-auto px-8 pt-32 pb-16">
       <nav class="text-sm text-on-surface-variant mb-8">
         <a class="hover:underline" href="/products/">Products</a>
         <span class="mx-2 opacity-50">/</span>
@@ -121,11 +121,37 @@
       <header class="mb-10">
         <h1 class="text-4xl md:text-5xl serif-tight font-bold text-primary mb-4">Raw Cotton</h1>
         <p class="text-on-surface-variant max-w-3xl leading-relaxed">
-          Detailed product specifications and growing regions.
+          Compare staple length, micronaire, strength, and trash—plus the main growing regions for each variety.
         </p>
       </header>
 
-      <div id="raw-cotton-list" class="space-y-8"></div>
+      <section class="mb-10 rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6 md:p-8">
+        <div class="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
+          <div>
+            <h2 class="font-headline text-xl md:text-2xl text-primary font-bold">Find a variety</h2>
+            <p class="text-on-surface-variant text-sm mt-1">Search by name or jump to a variety.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full lg:max-w-2xl">
+            <label class="sr-only" for="raw-cotton-search">Search varieties</label>
+            <input
+              id="raw-cotton-search"
+              type="search"
+              placeholder="Search (e.g. Shankar 6, MCU5, DCH 32)"
+              class="w-full rounded-xl border border-outline-variant/25 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+            />
+
+            <label class="sr-only" for="raw-cotton-jump">Jump to variety</label>
+            <select
+              id="raw-cotton-jump"
+              class="w-full rounded-xl border border-outline-variant/25 bg-surface-container-high px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-container focus:border-transparent"
+            >
+              <option value="">Jump to…</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div id="raw-cotton-list" class="space-y-6"></div>
 
       <section class="mt-12 rounded-2xl border border-outline-variant/20 bg-surface-container-low p-8">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
@@ -141,192 +167,196 @@
           <div class="w-full lg:max-w-xl">
             <div class="overflow-hidden rounded-2xl border border-outline-variant/15 bg-surface-container-lowest">
               <div class="wc-origin-marquee hover:[animation-play-state:paused]">
-                <div class="flex items-stretch gap-4 p-4 shrink-0" aria-hidden="false">
+                <div class="flex items-stretch gap-2 p-4 shrink-0" aria-hidden="false">
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Brazil</p>
-                      <span class="text-xl">🇧🇷</span>
+                      <span class="text-3xl leading-none">🇧🇷</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Origin flexibility for specs, consistency, and lead-time alignment.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Origin option based on spec and timing.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">South Africa</p>
-                      <span class="text-xl">🇿🇦</span>
+                      <span class="text-3xl leading-none">🇿🇦</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Sourcing options to match end-use needs and shipment schedules.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Alternative origin when it fits the requirement.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">United States</p>
-                      <span class="text-xl">🇺🇸</span>
+                      <span class="text-3xl leading-none">🇺🇸</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Trusted supply for buyers needing specific origin preferences.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">For buyers who need a specific origin.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Australia</p>
-                      <span class="text-xl">🇦🇺</span>
+                      <span class="text-3xl leading-none">🇦🇺</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Buyer support with clear specs and documentation-first execution.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">China</p>
-                      <span class="text-xl">🇨🇳</span>
+                      <span class="text-3xl leading-none">🇨🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Scale-ready lots with disciplined paperwork and timelines.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">India</p>
-                      <span class="text-xl">🇮🇳</span>
+                      <span class="text-3xl leading-none">🇮🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Wide variety coverage with detailed specs and growing regions.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Wide range of varieties.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Indonesia</p>
-                      <span class="text-xl">🇮🇩</span>
+                      <span class="text-3xl leading-none">🇮🇩</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Repeat-buy support with consistent lots and clear documentation.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Pakistan</p>
-                      <span class="text-xl">🇵🇰</span>
+                      <span class="text-3xl leading-none">🇵🇰</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Specification-led buying support with predictable dispatch flow.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Bangladesh</p>
-                      <span class="text-xl">🇧🇩</span>
+                      <span class="text-3xl leading-none">🇧🇩</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Textile market support with buyer updates across milestones.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Vietnam</p>
-                      <span class="text-xl">🇻🇳</span>
+                      <span class="text-3xl leading-none">🇻🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Spec-driven sourcing with responsive communication and updates.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">West Africa</p>
-                      <span class="text-xl">🌍</span>
+                      <span class="text-3xl leading-none">🌍</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Regional sourcing options across West African markets.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">East Africa</p>
-                      <span class="text-xl">🌍</span>
+                      <span class="text-3xl leading-none">🌍</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Documentation-first execution across East African markets.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                 </div>
 
-                <div class="flex items-stretch gap-4 p-4 shrink-0" aria-hidden="true">
+                <div class="flex items-stretch gap-2 p-4 shrink-0" aria-hidden="true">
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Brazil</p>
-                      <span class="text-xl">🇧🇷</span>
+                      <span class="text-3xl leading-none">🇧🇷</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Origin flexibility for specs, consistency, and lead-time alignment.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Origin option based on spec and timing.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">South Africa</p>
-                      <span class="text-xl">🇿🇦</span>
+                      <span class="text-3xl leading-none">🇿🇦</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Sourcing options to match end-use needs and shipment schedules.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Alternative origin when it fits the requirement.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">United States</p>
-                      <span class="text-xl">🇺🇸</span>
+                      <span class="text-3xl leading-none">🇺🇸</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Trusted supply for buyers needing specific origin preferences.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">For buyers who need a specific origin.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Australia</p>
-                      <span class="text-xl">🇦🇺</span>
+                      <span class="text-3xl leading-none">🇦🇺</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Buyer support with clear specs and documentation-first execution.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">China</p>
-                      <span class="text-xl">🇨🇳</span>
+                      <span class="text-3xl leading-none">🇨🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Scale-ready lots with disciplined paperwork and timelines.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">India</p>
-                      <span class="text-xl">🇮🇳</span>
+                      <span class="text-3xl leading-none">🇮🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Wide variety coverage with detailed specs and growing regions.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Wide range of varieties.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Indonesia</p>
-                      <span class="text-xl">🇮🇩</span>
+                      <span class="text-3xl leading-none">🇮🇩</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Repeat-buy support with consistent lots and clear documentation.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Pakistan</p>
-                      <span class="text-xl">🇵🇰</span>
+                      <span class="text-3xl leading-none">🇵🇰</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Specification-led buying support with predictable dispatch flow.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Bangladesh</p>
-                      <span class="text-xl">🇧🇩</span>
+                      <span class="text-3xl leading-none">🇧🇩</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Textile market support with buyer updates across milestones.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">Vietnam</p>
-                      <span class="text-xl">🇻🇳</span>
+                      <span class="text-3xl leading-none">🇻🇳</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Spec-driven sourcing with responsive communication and updates.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">West Africa</p>
-                      <span class="text-xl">🌍</span>
+                      <span class="text-3xl leading-none">🌍</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Regional sourcing options across West African markets.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                   <div class="w-[240px] rounded-xl bg-surface border border-outline-variant/15 p-5">
                     <div class="flex items-center justify-between mb-2">
                       <p class="font-bold text-primary">East Africa</p>
-                      <span class="text-xl">🌍</span>
+                      <span class="text-3xl leading-none">🌍</span>
                     </div>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Documentation-first execution across East African markets.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed">Available on request.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <p class="text-xs text-on-surface-variant mt-3">
-              Showing key origins and markets we support. Share your specs and preferred origin—we’ll align sourcing accordingly.
-            </p>
+            <p class="text-xs text-on-surface-variant mt-3">Common origins we can source from, depending on your spec.</p>
           </div>
         </div>
 
         <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a class="bg-primary text-on-primary px-7 py-3.5 rounded-md font-semibold inline-flex items-center justify-center gap-3 hover:opacity-95 transition" href="/contact/">
+          <a
+            class="bg-primary text-on-primary px-7 py-3.5 rounded-md font-semibold inline-flex items-center justify-center gap-3 hover:opacity-95 transition"
+            href="/contact/?subject=Raw%20Cotton%20Origin%20Options"
+          >
             Request origin options <span class="material-symbols-outlined">arrow_forward</span>
           </a>
-          <a class="bg-surface-container-lowest border border-outline-variant/20 text-primary px-7 py-3.5 rounded-md font-semibold inline-flex items-center justify-center gap-3 hover:bg-surface-container-low transition" href="/contact/">
+          <a
+            class="bg-surface-container-lowest border border-outline-variant/20 text-primary px-7 py-3.5 rounded-md font-semibold inline-flex items-center justify-center gap-3 hover:bg-surface-container-low transition"
+            href="/contact/?subject=Raw%20Cotton%20Specification"
+          >
             Share your specification <span class="material-symbols-outlined">description</span>
           </a>
         </div>
@@ -338,19 +368,43 @@
         const mount = document.getElementById("raw-cotton-list");
         if (!mount) return;
 
+        const esc = (s) =>
+          String(s ?? "")
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;");
+
         const toKeyValueRows = (obj) =>
           Object.entries(obj || {})
-            .map(([k, v]) => {
-              const key = String(k);
-              const val = String(v);
+            .map(([k, v], idx) => {
+              const key = esc(k);
+              const val = esc(v);
               return `
-                <div class="flex items-start justify-between gap-6 py-2 border-b border-outline-variant/15">
-                  <div class="text-on-surface-variant">${key}</div>
-                  <div class="text-on-surface font-semibold text-right break-words max-w-[60%]">${val}</div>
+                <div class="grid grid-cols-12 gap-4 py-2.5 ${idx ? "border-t border-outline-variant/15" : ""}">
+                  <div class="col-span-5 sm:col-span-4 text-on-surface-variant">${key}</div>
+                  <div class="col-span-7 sm:col-span-8 text-on-surface font-semibold break-words">${val}</div>
                 </div>
               `;
             })
             .join("");
+
+        const toRegionChips = (regions) => {
+          const items = Array.isArray(regions) ? regions : [];
+          if (!items.length) return `<p class="text-on-surface-variant text-sm">—</p>`;
+          return `
+            <div class="flex flex-wrap gap-2">
+              ${items
+                .map(
+                  (r) =>
+                    `<span class="inline-flex items-center rounded-full bg-surface-container-low border border-outline-variant/20 px-3 py-1 text-sm font-semibold text-primary">${esc(
+                      r
+                    )}</span>`
+                )
+                .join("")}
+            </div>
+          `;
+        };
 
         try {
           const res = await fetch("/data/products.json", { cache: "no-store" });
@@ -360,36 +414,124 @@
           const raw = (data.categories || []).find((c) => c.id === "raw-cotton");
           const items = raw?.items || [];
 
-          mount.innerHTML = items
-            .map((it) => {
-              const regions = (it.grownRegion || []).join(", ");
-              return `
-                <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-8">
-                  <h2 class="font-headline text-2xl text-primary mb-3">${it.title || ""}</h2>
-                  <p class="text-on-surface-variant leading-relaxed mb-6">${it.summary || ""}</p>
+          const listEl = document.getElementById("raw-cotton-list");
+          const jumpEl = document.getElementById("raw-cotton-jump");
+          const searchEl = document.getElementById("raw-cotton-search");
 
-                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div class="lg:col-span-1">
-                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Grown Region</div>
-                      <div class="text-on-surface font-semibold break-words">${regions}</div>
-                    </div>
-                    <div class="lg:col-span-2">
-                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Quality Specification</div>
-                      <div class="rounded-xl bg-surface-container-low p-4">
-                        ${toKeyValueRows(it.qualitySpecification || {})}
-                      </div>
-                    </div>
+          if (jumpEl) {
+            const options = items
+              .map((it, idx) => {
+                const id = `variety-${idx}`;
+                const title = String(it.title || "").trim();
+                return title ? `<option value="${id}">${esc(title)}</option>` : "";
+              })
+              .join("");
+            jumpEl.insertAdjacentHTML("beforeend", options);
+          }
+
+          const render = (query) => {
+            const q = String(query || "").trim().toLowerCase();
+            const filtered = !q
+              ? items
+              : items.filter((it) => String(it.title || "").toLowerCase().includes(q) || String(it.summary || "").toLowerCase().includes(q));
+
+            if (!filtered.length) {
+              if (listEl) {
+                listEl.innerHTML = `
+                  <div class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-8">
+                    <p class="text-on-surface-variant">No varieties match your search.</p>
                   </div>
-                </section>
-              `;
-            })
-            .join("");
+                `;
+              }
+              return;
+            }
+
+            if (listEl) {
+              listEl.innerHTML = filtered
+                .map((it, idx) => {
+                  const title = esc(it.title || "");
+                  const summary = esc(it.summary || "");
+                  const id = `variety-${items.indexOf(it)}`;
+                  const subject = encodeURIComponent(`${String(it.title || "Raw Cotton")} Enquiry`);
+                  return `
+                    <details class="group rounded-2xl border border-outline-variant/20 bg-surface-container-lowest">
+                      <summary class="list-none cursor-pointer select-none p-6 md:p-7 flex items-start justify-between gap-4">
+                        <div class="min-w-0">
+                          <h2 id="${id}" class="font-headline text-xl md:text-2xl text-primary font-bold">${title}</h2>
+                          ${summary ? `<p class="text-on-surface-variant leading-relaxed mt-2">${summary}</p>` : ""}
+                        </div>
+                        <div class="flex items-center gap-3 shrink-0">
+                          <a class="hidden sm:inline-flex bg-primary text-on-primary px-4 py-2 rounded-lg font-semibold text-sm hover:opacity-95" href="/contact/?subject=${subject}">
+                            Enquire
+                          </a>
+                          <span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+                        </div>
+                      </summary>
+                      <div class="px-6 md:px-7 pb-6 md:pb-7">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                          <div class="lg:col-span-1">
+                            <div class="text-xs uppercase tracking-widest text-outline mb-2">Grown region</div>
+                            ${toRegionChips(it.grownRegion)}
+                          </div>
+                          <div class="lg:col-span-2">
+                            <div class="flex items-center justify-between gap-4 mb-2">
+                              <div class="text-xs uppercase tracking-widest text-outline">Quality specification</div>
+                              <a class="sm:hidden inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline" href="/contact/?subject=${subject}">
+                                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                              </a>
+                            </div>
+                            <div class="rounded-xl bg-surface-container-low p-4">
+                              ${toKeyValueRows(it.qualitySpecification || {})}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  `;
+                })
+                .join("");
+            }
+          };
+
+          render("");
+
+          if (searchEl) {
+            searchEl.addEventListener("input", (e) => {
+              render(e.target.value);
+            });
+          }
+
+          if (jumpEl) {
+            jumpEl.addEventListener("change", (e) => {
+              const id = e.target.value;
+              if (!id) return;
+              const el = document.getElementById(id);
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                // open the matching <details> if present
+                const details = el.closest("details");
+                if (details) details.open = true;
+              }
+              e.target.value = "";
+            });
+          }
         } catch (e) {
           mount.innerHTML = `
             <div class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-8">
               <p class="text-on-surface-variant">Raw cotton data could not be loaded.</p>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <button id="raw-cotton-retry" class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm" type="button">
+                  Retry
+                </button>
+                <a class="text-primary font-semibold underline underline-offset-4" href="/contact/?subject=Raw%20Cotton%20Specifications">
+                  Contact us
+                </a>
+              </div>
             </div>
           `;
+
+          const retry = document.getElementById("raw-cotton-retry");
+          if (retry) retry.addEventListener("click", () => globalThis.location.reload());
         }
       })();
     </script>
@@ -397,7 +539,7 @@
 
     <script src="/shared/site-chrome.js"></script>
     <script>
-      window.WorldcotChrome?.mount({ active: "products" });
+      globalThis.WorldcotChrome?.mount({ active: "products" });
     </script>
   </body>
 </html>

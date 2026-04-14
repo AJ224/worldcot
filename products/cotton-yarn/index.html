@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Worldcot International — Cotton Yarn</title>
+    <title>Worldcot International — Cotton Yarn Specifications</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap"
@@ -96,61 +96,465 @@
   <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
     <div id="site-navbar"></div>
 
-    <main class="max-w-7xl mx-auto px-8 py-16">
+    <main class="max-w-7xl mx-auto px-8 pt-32 pb-16">
+      <!-- Breadcrumb -->
       <nav class="text-sm text-on-surface-variant mb-8">
         <a class="hover:underline" href="/products/">Products</a>
         <span class="mx-2 opacity-50">/</span>
-        <span class="text-on-surface">Cotton Yarn</span>
+        <a class="hover:underline" href="/products/cotton-yarn/">Cotton Yarn</a>
+        <span class="mx-2 opacity-50">/</span>
+        <span class="text-on-surface">Specifications</span>
       </nav>
 
+      <!-- Hero -->
       <header class="mb-10">
-        <h1 class="text-4xl md:text-5xl serif-tight font-bold text-primary mb-4">Cotton Yarn</h1>
-        <p class="text-on-surface-variant max-w-3xl leading-relaxed">
-          Overview, offerings, and certifications.
-        </p>
+        <section class="rounded-3xl border border-primary/25 bg-primary p-8 md:p-10 overflow-hidden relative">
+          <div class="absolute -top-16 -right-16 opacity-15 pointer-events-none">
+            <span class="material-symbols-outlined text-[220px] text-white">spoke</span>
+          </div>
+          <div class="relative">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/75 mb-4">Cotton yarn</p>
+            <h1 class="text-4xl md:text-5xl serif-tight font-bold text-white leading-tight max-w-4xl">
+              Cotton Yarn Specifications
+            </h1>
+            <p class="mt-5 text-white/80 max-w-3xl leading-relaxed text-lg">
+              Quick ranges for carded, combed, and open-end yarn—built for buyers who want the numbers up front.
+            </p>
+          </div>
+        </section>
       </header>
 
-      <article id="yarn-content" class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-8 md:p-10"></article>
+      <!-- Controls -->
+      <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6 md:p-7">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div class="min-w-0">
+            <h2 class="font-headline text-2xl text-primary font-bold">Filter</h2>
+            <p class="text-on-surface-variant text-sm mt-1">Switch between yarn types instantly.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-2" role="tablist" aria-label="Yarn type filters">
+            <button class="wc-filter-btn px-5 py-2.5 rounded-full border border-outline-variant/25 bg-primary text-on-primary font-semibold text-sm" type="button" data-filter="all" role="tab" aria-selected="true">
+              All
+            </button>
+            <button class="wc-filter-btn px-5 py-2.5 rounded-full border border-outline-variant/25 bg-surface text-primary font-semibold text-sm" type="button" data-filter="carded" role="tab" aria-selected="false">
+              Carded
+            </button>
+            <button class="wc-filter-btn px-5 py-2.5 rounded-full border border-outline-variant/25 bg-surface text-primary font-semibold text-sm" type="button" data-filter="combed" role="tab" aria-selected="false">
+              Combed
+            </button>
+            <button class="wc-filter-btn px-5 py-2.5 rounded-full border border-outline-variant/25 bg-surface text-primary font-semibold text-sm" type="button" data-filter="open-end" role="tab" aria-selected="false">
+              Open-end
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-2 text-sm">
+            <span class="text-on-surface-variant font-medium">Legend:</span>
+            <span class="inline-flex items-center gap-2 rounded-full px-3 py-1 border border-emerald-200 bg-emerald-50 text-emerald-900 font-semibold">
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> Carded
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full px-3 py-1 border border-sky-200 bg-sky-50 text-sky-900 font-semibold">
+              <span class="h-2.5 w-2.5 rounded-full bg-sky-500"></span> Combed
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full px-3 py-1 border border-amber-200 bg-amber-50 text-amber-900 font-semibold">
+              <span class="h-2.5 w-2.5 rounded-full bg-amber-500"></span> Open-end
+            </span>
+          </div>
+
+          <p class="text-on-surface-variant text-sm">
+            Values shown are typical ranges. Share your required spec for a confirmed offer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Spec cards -->
+      <section class="mt-8">
+        <div id="yarn-spec-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+      </section>
+
+      <!-- Custom spec notice -->
+      <section class="mt-10 rounded-2xl border border-outline-variant/20 bg-surface-container-low p-7 md:p-8">
+        <div class="flex items-start gap-4">
+          <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1">tune</span>
+          <div>
+            <h3 class="font-headline text-xl text-primary font-bold">Need a custom spec?</h3>
+            <p class="text-on-surface-variant leading-relaxed mt-2">
+              If your requirement falls outside these ranges (count, twist, strength, CV%), we can still help—send the target spec and destination.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-10 rounded-3xl border border-primary/25 bg-primary p-8 md:p-10 overflow-hidden relative">
+        <div class="absolute -top-16 -right-16 opacity-15 pointer-events-none">
+          <span class="material-symbols-outlined text-[220px] text-white">science</span>
+        </div>
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div class="lg:col-span-6">
+            <h2 class="font-headline text-3xl md:text-4xl text-white font-bold">Request a sample</h2>
+            <p class="text-white/80 mt-3 leading-relaxed">
+              Tell us the count you’re looking for and your destination. We’ll confirm availability and next steps.
+            </p>
+          </div>
+          <div class="lg:col-span-6">
+            <form id="sample-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+              <div class="sm:col-span-1">
+                <label class="text-sm font-semibold text-white/90" for="sample-count">Count *</label>
+                <input
+                  id="sample-count"
+                  name="count"
+                  required
+                  placeholder="e.g. Ne 32 KW"
+                  class="mt-2 w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/40 focus:border-transparent"
+                />
+                <p class="hidden text-white/80 text-xs mt-2" data-error-for="sample-count">Please enter the count.</p>
+              </div>
+              <div class="sm:col-span-1">
+                <label class="text-sm font-semibold text-white/90" for="sample-destination">Destination *</label>
+                <input
+                  id="sample-destination"
+                  name="destination"
+                  required
+                  placeholder="e.g. Turkey / Bangladesh"
+                  class="mt-2 w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/40 focus:border-transparent"
+                />
+                <p class="hidden text-white/80 text-xs mt-2" data-error-for="sample-destination">Please enter the destination.</p>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="text-sm font-semibold text-white/90" for="sample-note">Note (optional)</label>
+                <textarea
+                  id="sample-note"
+                  name="note"
+                  rows="3"
+                  placeholder="Carded/combed/OE, packing, certification needs…"
+                  class="mt-2 w-full rounded-xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/40 focus:border-transparent resize-y"
+                ></textarea>
+              </div>
+              <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+                <button
+                  class="bg-white text-primary px-7 py-3.5 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:opacity-95 transition"
+                  type="submit"
+                >
+                  Request sample <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+                <p class="text-white/70 text-sm">
+                  No commitment—just a quick confirmation.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Counts offered -->
+      <section class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <section class="lg:col-span-7 rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 md:p-8">
+          <h2 class="font-headline text-2xl text-primary font-bold">Counts offered</h2>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+              <p class="text-xs uppercase tracking-widest text-outline">Open-end</p>
+              <ul class="mt-4 space-y-2 text-on-surface">
+                <li>10s</li>
+                <li>16s</li>
+                <li>20s</li>
+                <li>24s</li>
+                <li>26s</li>
+                <li>30s</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+              <p class="text-xs uppercase tracking-widest text-outline">Spinning</p>
+              <ul class="mt-4 space-y-2 text-on-surface">
+                <li>30s KW</li>
+                <li>32s KW</li>
+                <li>40s KW</li>
+                <li>60s KW</li>
+                <li>40s CCW</li>
+                <li>60s CCW</li>
+                <li>41s KW</li>
+                <li>30s rayon</li>
+                <li class="font-semibold text-primary">Customer specific</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="lg:col-span-5 rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 md:p-8">
+          <h2 class="font-headline text-2xl text-primary font-bold">Also supplied</h2>
+          <div class="mt-6 space-y-6">
+            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+              <p class="text-xs uppercase tracking-widest text-outline">Polyester</p>
+              <ul class="mt-4 space-y-2 text-on-surface">
+                <li>Partially Oriented Yarn (POY)</li>
+                <li>Draw Textured Yarn (DTY)</li>
+                <li>Twisted Polyester Yarn</li>
+                <li>Polyester Staple Fibre (PSF)</li>
+                <li>150 denier</li>
+                <li>200 denier</li>
+                <li>240 denier</li>
+                <li>300 denier</li>
+                <li>Polyester cotton (60% P / 40% C)</li>
+                <li>Polyester cotton (40% C / 60% P)</li>
+                <li class="font-semibold text-primary">Customer specific</li>
+              </ul>
+            </div>
+            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+              <p class="text-xs uppercase tracking-widest text-outline">Fabrics</p>
+              <ul class="mt-4 space-y-2 text-on-surface">
+                <li>Powerlooms fabric</li>
+                <li>Airjet looms fabric</li>
+                <li>Sulzer looms fabric</li>
+                <li>Plain weave cotton fabric</li>
+                <li>Wider width fabrics</li>
+                <li>Narrow width fabrics</li>
+                <li class="font-semibold text-primary">Customer specific</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Worldcot copy -->
+      <section class="mt-12 rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 md:p-8">
+        <h2 class="font-headline text-2xl text-primary font-bold">About Worldcot</h2>
+        <p class="text-on-surface-variant leading-relaxed mt-4">
+          Worldcot is committed to sourcing and supplying yarn and textile products that meet buyer specifications consistently. We work with established spinning and open-end units and coordinate end-to-end so buyers can plan production with confidence.
+        </p>
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-6 rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+            <p class="text-xs uppercase tracking-widest text-outline">Vision</p>
+            <p class="mt-3 text-on-surface-variant leading-relaxed">
+              Be a preferred sourcing partner for textile manufacturers—known for dependable supply, clear communication, and consistent quality.
+            </p>
+          </div>
+          <div class="lg:col-span-6 rounded-xl bg-surface-container-low border border-outline-variant/15 p-6">
+            <p class="text-xs uppercase tracking-widest text-outline">Our strength: suppliers</p>
+            <p class="mt-3 text-on-surface-variant leading-relaxed">
+              We source from quality-focused mills and OE units to maintain stable output and consistent lots. Our supplier network follows high standards so the yarn you approve is the yarn you receive.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script>
-      (async () => {
-        const mount = document.getElementById("yarn-content");
-        if (!mount) return;
+      (() => {
+        const specGrid = document.getElementById("yarn-spec-grid");
+        const buttons = Array.from(document.querySelectorAll(".wc-filter-btn"));
+        const form = document.getElementById("sample-form");
 
-        try {
-          const res = await fetch("/data/products.json", { cache: "no-store" });
-          if (!res.ok) throw new Error("Failed to load products.json");
-          const data = await res.json();
+        if (!specGrid || !buttons.length) return;
 
-          const cat = (data.categories || []).find((c) => c.id === "cotton-yarn");
-          const content = cat?.content || {};
+        const specs = [
+          // Carded (3)
+          {
+            type: "carded",
+            title: "Carded — Ne 6–10",
+            badge: "Carded",
+            count: "Ne 6–10",
+            twist: "14–18 TPI",
+            tensile: "12–16 cN/tex",
+            elongation: "5.0–6.5%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 12–15",
+          },
+          {
+            type: "carded",
+            title: "Carded — Ne 16–20",
+            badge: "Carded",
+            count: "Ne 16–20",
+            twist: "18–22 TPI",
+            tensile: "14–18 cN/tex",
+            elongation: "4.8–6.2%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 11–14",
+          },
+          {
+            type: "carded",
+            title: "Carded — Ne 24–30",
+            badge: "Carded",
+            count: "Ne 24–30",
+            twist: "22–26 TPI",
+            tensile: "15–20 cN/tex",
+            elongation: "4.5–6.0%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 10–13",
+          },
 
-          const paragraphs = (content.paragraphs || [])
-            .map((p) => `<p class="text-on-surface-variant leading-relaxed">${p}</p>`)
-            .join("");
+          // Combed (3)
+          {
+            type: "combed",
+            title: "Combed — Ne 20–30",
+            badge: "Combed",
+            count: "Ne 20–30",
+            twist: "22–28 TPI",
+            tensile: "18–24 cN/tex",
+            elongation: "4.8–6.5%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 9–12",
+          },
+          {
+            type: "combed",
+            title: "Combed — Ne 32–40",
+            badge: "Combed",
+            count: "Ne 32–40",
+            twist: "26–32 TPI",
+            tensile: "20–26 cN/tex",
+            elongation: "4.5–6.0%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 8–11",
+          },
+          {
+            type: "combed",
+            title: "Combed — Ne 50–80",
+            badge: "Combed",
+            count: "Ne 50–80",
+            twist: "30–38 TPI",
+            tensile: "22–30 cN/tex",
+            elongation: "4.0–5.8%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 7–10",
+          },
 
-          const offerings = (content.offerings || [])
-            .map((x) => `<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary mt-0.5">check</span><span>${x}</span></li>`)
-            .join("");
+          // Open-end (3)
+          {
+            type: "open-end",
+            title: "Open-end — Ne 6–12",
+            badge: "Open-end",
+            count: "Ne 6–12",
+            twist: "12–16 TPI",
+            tensile: "10–14 cN/tex",
+            elongation: "5.0–7.0%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 13–16",
+          },
+          {
+            type: "open-end",
+            title: "Open-end — Ne 14–20",
+            badge: "Open-end",
+            count: "Ne 14–20",
+            twist: "14–18 TPI",
+            tensile: "11–16 cN/tex",
+            elongation: "4.8–6.8%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 12–15",
+          },
+          {
+            type: "open-end",
+            title: "Open-end — Ne 20–30",
+            badge: "Open-end",
+            count: "Ne 20–30",
+            twist: "16–22 TPI",
+            tensile: "12–18 cN/tex",
+            elongation: "4.5–6.5%",
+            moisture: "7.0–8.5%",
+            uster: "CV% 11–14",
+          },
+        ];
 
-          mount.innerHTML = `
-            <h2 class="font-headline text-2xl text-primary mb-6">${content.title || "Cotton Yarn"}</h2>
-            <div class="space-y-5 mb-10">${paragraphs}</div>
+        const palette = {
+          carded: {
+            badge: "border-emerald-200 bg-emerald-50 text-emerald-900",
+            dot: "bg-emerald-500",
+          },
+          combed: {
+            badge: "border-sky-200 bg-sky-50 text-sky-900",
+            dot: "bg-sky-500",
+          },
+          "open-end": {
+            badge: "border-amber-200 bg-amber-50 text-amber-900",
+            dot: "bg-amber-500",
+          },
+        };
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <section class="rounded-xl bg-surface-container-low p-6 border border-outline-variant/15">
-                <div class="text-xs uppercase tracking-widest text-outline mb-3">${content.offeringsTitle || "Offerings"}</div>
-                <ul class="space-y-3 text-on-surface">${offerings}</ul>
-              </section>
-              <section class="rounded-xl bg-surface-container-low p-6 border border-outline-variant/15">
-                <div class="text-xs uppercase tracking-widest text-outline mb-3">Certifications</div>
-                <p class="text-on-surface-variant leading-relaxed">${content.certifications || ""}</p>
-              </section>
-            </div>
+        const row = (label, value) => `
+          <div class="grid grid-cols-12 gap-3 py-2.5 border-t border-outline-variant/15 first:border-t-0">
+            <div class="col-span-6 text-on-surface-variant text-sm">${label}</div>
+            <div class="col-span-6 text-on-surface font-semibold text-sm text-right">${value}</div>
+          </div>
+        `;
+
+        const card = (s) => {
+          const p = palette[s.type];
+          return `
+            <article class="wc-spec-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6 md:p-7" data-type="${s.type}">
+              <div class="flex items-start justify-between gap-4">
+                <div class="min-w-0">
+                  <h3 class="font-headline text-xl text-primary font-bold">${s.title}</h3>
+                </div>
+                <span class="inline-flex items-center gap-2 rounded-full px-3 py-1 border ${p.badge} text-xs font-bold uppercase tracking-[0.18em] shrink-0">
+                  <span class="h-2.5 w-2.5 rounded-full ${p.dot}"></span>${s.badge}
+                </span>
+              </div>
+
+              <div class="mt-5 rounded-xl bg-surface-container-low border border-outline-variant/15 p-4">
+                ${row("Count range", s.count)}
+                ${row("Twist (TPI)", s.twist)}
+                ${row("Tensile strength", s.tensile)}
+                ${row("Elongation", s.elongation)}
+                ${row("Moisture regain", s.moisture)}
+                ${row("Uster CV%", s.uster)}
+              </div>
+
+              <div class="mt-5 flex flex-wrap items-center justify-between gap-3">
+                <p class="text-on-surface-variant text-sm">Need a different spec? We can quote it.</p>
+                <a class="text-primary font-semibold text-sm hover:underline inline-flex items-center gap-2" href="/contact/?subject=${encodeURIComponent(
+                  `Cotton Yarn Spec — ${s.title}`
+                )}">
+                  Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
           `;
-        } catch (e) {
-          mount.innerHTML = `<p class="text-on-surface-variant">Cotton yarn data could not be loaded.</p>`;
+        };
+
+        const render = (filter) => {
+          const list = specs.filter((s) => filter === "all" || s.type === filter);
+          specGrid.innerHTML = list.map(card).join("");
+        };
+
+        const setActive = (filter) => {
+          buttons.forEach((b) => {
+            const isActive = (b.dataset.filter || "all") === filter;
+            b.classList.toggle("bg-primary", isActive);
+            b.classList.toggle("text-on-primary", isActive);
+            b.classList.toggle("border-primary/40", isActive);
+            b.classList.toggle("bg-surface", !isActive);
+            b.classList.toggle("text-primary", !isActive);
+            b.setAttribute("aria-selected", String(isActive));
+          });
+          render(filter);
+        };
+
+        buttons.forEach((b) => b.addEventListener("click", () => setActive(b.dataset.filter || "all")));
+        setActive("all");
+
+        if (form) {
+          const showError = (id, show) => {
+            const el = document.querySelector(`[data-error-for="${id}"]`);
+            if (el) el.classList.toggle("hidden", !show);
+          };
+
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const count = document.getElementById("sample-count");
+            const destination = document.getElementById("sample-destination");
+            const note = document.getElementById("sample-note");
+
+            const countVal = count?.value?.trim() || "";
+            const destVal = destination?.value?.trim() || "";
+            const noteVal = note?.value?.trim() || "";
+
+            showError("sample-count", !countVal);
+            showError("sample-destination", !destVal);
+            if (!countVal || !destVal) return;
+
+            const subject = encodeURIComponent(`Sample request — Cotton Yarn (${countVal})`);
+            const body = encodeURIComponent(`Count: ${countVal}\nDestination: ${destVal}\n\n${noteVal}`);
+            globalThis.location.href = `mailto:worldcottradingcorp@gmail.com?subject=${subject}&body=${body}`;
+          });
         }
       })();
     </script>
@@ -158,7 +562,7 @@
 
     <script src="/shared/site-chrome.js"></script>
     <script>
-      window.WorldcotChrome?.mount({ active: "products" });
+      globalThis.WorldcotChrome?.mount({ active: "products" });
     </script>
   </body>
 </html>

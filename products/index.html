@@ -103,19 +103,20 @@
   <body class="bg-background text-on-surface font-body selection:bg-secondary-container">
     <div id="site-navbar"></div>
 
-    <main class="max-w-7xl mx-auto px-8 py-16">
+    <main class="max-w-7xl mx-auto px-8 pt-32 pb-16">
       <!-- Hero -->
-      <section class="rounded-3xl border border-outline-variant/20 bg-surface-container-lowest p-10 md:p-12 overflow-hidden relative">
-        <div class="absolute -top-16 -right-16 opacity-10 pointer-events-none">
-          <span class="material-symbols-outlined text-[220px] text-primary">inventory_2</span>
+      <section class="rounded-3xl border border-primary/25 bg-primary p-10 md:p-12 overflow-hidden relative">
+        <div class="absolute -top-16 -right-16 opacity-15 pointer-events-none">
+          <span class="material-symbols-outlined text-[220px] text-white">inventory_2</span>
         </div>
         <div class="relative">
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4">Products</p>
-          <h1 class="text-4xl md:text-5xl serif-tight font-bold text-primary leading-tight max-w-4xl">
-            Sourced with care. Delivered with clarity.
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/75 mb-4">Products</p>
+          <h1 class="text-4xl md:text-5xl serif-tight font-bold text-white leading-tight max-w-4xl">
+            <span class="block">Sourced with care</span>
+            <span class="block">Delivered with clarity</span>
           </h1>
-          <p class="mt-5 text-on-surface-variant max-w-3xl leading-relaxed text-lg">
-            Explore our core categories—built for repeat buying with consistent lots, documentation discipline, and practical trade support.
+          <p class="mt-5 text-white/80 max-w-3xl leading-relaxed text-lg">
+            Browse our core categories with clear specs and straightforward buying support.
           </p>
         </div>
       </section>
@@ -134,13 +135,12 @@
                 Certified and conventional cotton options with spec discipline and shipment-ready documentation.
               </p>
             </div>
-            <button
+            <a
               class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-              type="button"
-              data-spec-button="cotton"
+              href="/products/raw-cotton/"
             >
               More specifications <span class="material-symbols-outlined text-sm">trending_flat</span>
-            </button>
+            </a>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -152,8 +152,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 For brands requiring traceability and compliance-first sourcing—aligned to end-use and approvals.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Organic%20Cotton%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Organic%20Cotton%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -165,8 +165,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 A dependable range of cotton grades sourced to spec—built for consistent lots and repeat buying.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Conventional%20Cotton%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Conventional%20Cotton%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -178,8 +178,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Contamination-conscious sourcing for open-end spinning and recycling applications.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Waste%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Waste%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -191,8 +191,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Program-aligned sourcing with documentation discipline—supporting buyer compliance requirements.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=PSCP%20%2F%20Primark%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=PSCP%20%2F%20Primark%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -204,8 +204,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Processed cotton waste inputs with controlled specs—suited for mills with consistent feed requirements.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Flat%20Strips%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Flat%20Strips%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -217,8 +217,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 For sustainability-led sourcing programs—supporting responsible practices and buyer documentation.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Regenagri%20Cotton%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Regenagri%20Cotton%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
           </div>
@@ -236,13 +236,12 @@
                 Textile-grade inputs with consistent specs and repeatable supply.
               </p>
             </div>
-            <button
+            <a
               class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-              type="button"
-              data-spec-button="yarn"
+              href="/products/cotton-yarn/"
             >
               More specifications <span class="material-symbols-outlined text-sm">trending_flat</span>
-            </button>
+            </a>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -254,8 +253,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Carded, combed, compact, and sustainable certified yarns—aligned to your count and end-use.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Yarn%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Cotton%20Yarn%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
 
@@ -267,8 +266,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Fabric and related textile inputs sourced for consistent performance and predictable dispatch.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Textile%20Inputs%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Textile%20Inputs%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
           </div>
@@ -297,8 +296,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Consistent bulk grain supply with documentation discipline and delivery clarity.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Grains%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Grains%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
             <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
@@ -309,8 +308,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Buyer-aligned quality specs and dependable shipment coordination for pulses.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Pulses%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Pulses%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
             <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
@@ -321,8 +320,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Spec-driven sourcing and documentation for smooth clearance and planning.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Oilseeds%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Oilseeds%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
             <article class="wc-card rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-7 flex flex-col" data-tags="agro">
@@ -333,8 +332,8 @@
               <p class="mt-3 text-on-surface-variant text-sm leading-relaxed flex-1">
                 Need something not listed? Share specs and destination—our team will propose options.
               </p>
-              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Custom%20Sourcing%20Inquiry">
-                Inquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              <a class="mt-6 inline-flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-lg font-semibold text-sm" href="/contact/?subject=Custom%20Sourcing%20Enquiry">
+                Enquire <span class="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </article>
           </div>
@@ -357,33 +356,6 @@
       </section>
     </main>
 
-    <!-- Specifications modal -->
-    <div id="wc-spec-modal" class="fixed inset-0 z-[90] hidden" aria-hidden="true">
-      <button id="wc-spec-modal-overlay" class="absolute inset-0 bg-black/35" type="button" aria-label="Close"></button>
-      <aside
-        class="absolute right-0 top-0 h-full w-[min(44rem,94vw)] bg-surface-container-lowest border-l border-outline-variant/25 shadow-2xl"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Specifications"
-      >
-        <div class="p-6 border-b border-outline-variant/15 flex items-start justify-between gap-4">
-          <div>
-            <p id="wc-spec-modal-title" class="font-headline font-bold text-primary text-2xl"></p>
-            <p id="wc-spec-modal-subtitle" class="text-on-surface-variant text-sm mt-1"></p>
-          </div>
-          <button
-            id="wc-spec-modal-close"
-            class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-outline-variant/30 bg-surface text-primary"
-            type="button"
-            aria-label="Close"
-          >
-            <span class="material-symbols-outlined">close</span>
-          </button>
-        </div>
-        <div id="wc-spec-modal-body" class="p-6 space-y-6 overflow-auto h-[calc(100%-84px)]"></div>
-      </aside>
-    </div>
-
     <div id="site-footer"></div>
 
     <script src="/shared/site-chrome.js"></script>
@@ -391,164 +363,6 @@
       window.WorldcotChrome?.mount({ active: "products" });
     </script>
 
-    <script>
-      (async () => {
-        const modal = document.getElementById("wc-spec-modal");
-        const overlay = document.getElementById("wc-spec-modal-overlay");
-        const closeBtn = document.getElementById("wc-spec-modal-close");
-        const titleEl = document.getElementById("wc-spec-modal-title");
-        const subtitleEl = document.getElementById("wc-spec-modal-subtitle");
-        const bodyEl = document.getElementById("wc-spec-modal-body");
-        const buttons = Array.from(document.querySelectorAll("[data-spec-button]"));
-
-        if (!modal || !overlay || !closeBtn || !titleEl || !subtitleEl || !bodyEl || !buttons.length) return;
-
-        let cachedData = null;
-        async function getData() {
-          if (cachedData) return cachedData;
-          const res = await fetch("/data/products.json", { cache: "no-store" });
-          if (!res.ok) throw new Error("Failed to load products.json");
-          cachedData = await res.json();
-          return cachedData;
-        }
-
-        const open = () => {
-          modal.classList.remove("hidden");
-          modal.setAttribute("aria-hidden", "false");
-          document.documentElement.classList.add("wc-modal-open");
-        };
-        const close = () => {
-          modal.classList.add("hidden");
-          modal.setAttribute("aria-hidden", "true");
-          document.documentElement.classList.remove("wc-modal-open");
-        };
-
-        overlay.addEventListener("click", close);
-        closeBtn.addEventListener("click", close);
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") close();
-        });
-
-        const esc = (s) =>
-          String(s ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
-
-        const specRows = (obj) => {
-          const entries = Object.entries(obj || {});
-          if (!entries.length) return `<p class="text-on-surface-variant text-sm">No specifications available.</p>`;
-          return `
-            <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-4">
-              ${entries
-                .map(
-                  ([k, v]) => `
-                    <div class="flex items-start justify-between gap-6 py-2 border-b border-outline-variant/15 last:border-b-0">
-                      <div class="text-on-surface-variant">${esc(k)}</div>
-                      <div class="text-on-surface font-semibold text-right break-words max-w-[60%]">${esc(v)}</div>
-                    </div>
-                  `
-                )
-                .join("")}
-            </div>
-          `;
-        };
-
-        const renderCotton = (data) => {
-          const raw = (data.categories || []).find((c) => c.id === "raw-cotton");
-          const items = raw?.items || [];
-          titleEl.textContent = "Cotton specifications";
-          subtitleEl.textContent = "From our raw cotton catalog (grade, staple length, micronaire, etc.).";
-          bodyEl.innerHTML = items
-            .map((it) => {
-              const regions = (it.grownRegion || []).join(", ");
-              return `
-                <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                    <div>
-                      <h3 class="font-headline text-xl text-primary font-bold">${esc(it.title || "")}</h3>
-                      <p class="text-on-surface-variant text-sm mt-2 leading-relaxed">${esc(it.summary || "")}</p>
-                    </div>
-                    <a class="shrink-0 inline-flex items-center gap-2 text-primary font-semibold hover:underline" href="/products/raw-cotton/">
-                      View page <span class="material-symbols-outlined text-sm">chevron_right</span>
-                    </a>
-                  </div>
-                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-                    <div class="lg:col-span-1">
-                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Grown Region</div>
-                      <div class="text-on-surface font-semibold break-words">${esc(regions)}</div>
-                    </div>
-                    <div class="lg:col-span-2">
-                      <div class="text-xs uppercase tracking-widest text-outline mb-2">Quality Specification</div>
-                      ${specRows(it.qualitySpecification || {})}
-                    </div>
-                  </div>
-                </section>
-              `;
-            })
-            .join("");
-        };
-
-        const renderYarn = (data) => {
-          const yarn = (data.categories || []).find((c) => c.id === "cotton-yarn");
-          const content = yarn?.content || {};
-          titleEl.textContent = "Yarn specifications";
-          subtitleEl.textContent = "Offerings and certification support from our cotton yarn catalog.";
-
-          const paragraphs = (content.paragraphs || []).slice(0, 2);
-          const offerings = content.offerings || [];
-
-          bodyEl.innerHTML = `
-            <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
-              <div class="flex items-start justify-between gap-4">
-                <h3 class="font-headline text-xl text-primary font-bold">${esc(content.title || "Cotton Yarn")}</h3>
-                <a class="inline-flex items-center gap-2 text-primary font-semibold hover:underline" href="/products/cotton-yarn/">
-                  View page <span class="material-symbols-outlined text-sm">chevron_right</span>
-                </a>
-              </div>
-              <div class="mt-4 space-y-3">
-                ${paragraphs.map((p) => `<p class="text-on-surface-variant text-sm leading-relaxed">${esc(p)}</p>`).join("")}
-              </div>
-            </section>
-
-            <section class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6">
-              <div class="flex items-center justify-between gap-4">
-                <h3 class="font-headline text-xl text-primary font-bold">${esc(content.offeringsTitle || "Offerings")}</h3>
-              </div>
-              <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                ${offerings
-                  .map(
-                    (o) => `
-                      <div class="rounded-xl bg-surface-container-low border border-outline-variant/15 p-4">
-                        <p class="font-semibold text-primary">${esc(o)}</p>
-                      </div>
-                    `
-                  )
-                  .join("")}
-              </div>
-              ${
-                content.certifications
-                  ? `<p class="text-on-surface-variant text-sm leading-relaxed mt-5">${esc(content.certifications)}</p>`
-                  : ""
-              }
-            </section>
-          `;
-        };
-
-        async function handle(type) {
-          try {
-            const data = await getData();
-            if (type === "cotton") renderCotton(data);
-            if (type === "yarn") renderYarn(data);
-            open();
-          } catch (e) {
-            titleEl.textContent = "Specifications";
-            subtitleEl.textContent = "";
-            bodyEl.innerHTML = `<div class="rounded-2xl border border-outline-variant/20 bg-surface-container-lowest p-6"><p class="text-on-surface-variant">Specifications data could not be loaded.</p></div>`;
-            open();
-          }
-        }
-
-        buttons.forEach((b) => b.addEventListener("click", () => handle(b.getAttribute("data-spec-button"))));
-      })();
-    </script>
   </body>
 </html>
 
