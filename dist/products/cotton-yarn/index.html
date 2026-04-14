@@ -537,7 +537,7 @@
             if (el) el.classList.toggle("hidden", !show);
           };
 
-          form.addEventListener("submit", (e) => {
+          form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const count = document.getElementById("sample-count");
             const destination = document.getElementById("sample-destination");
@@ -553,7 +553,26 @@
 
             const subject = encodeURIComponent(`Sample request — Cotton Yarn (${countVal})`);
             const body = encodeURIComponent(`Count: ${countVal}\nDestination: ${destVal}\n\n${noteVal}`);
-            globalThis.location.href = `mailto:worldcottradingcorp@gmail.com?subject=${subject}&body=${body}`;
+            try {
+              const res = await fetch("/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  formType: "cotton-yarn-sample",
+                  subject: `Sample request — Cotton Yarn (${countVal})`,
+                  replyTo: "worldcottradingcorpn@gmail.com",
+                  payload: {
+                    Count: countVal,
+                    Destination: destVal,
+                    Note: noteVal
+                  }
+                })
+              });
+              if (!res.ok) throw new Error("Failed");
+              globalThis.location.href = `/contact/?subject=${encodeURIComponent(`Sample request — Cotton Yarn (${countVal})`)}`;
+            } catch (err) {
+              globalThis.location.href = `mailto:worldcottradingcorpn@gmail.com?subject=${subject}&body=${body}`;
+            }
           });
         }
       })();

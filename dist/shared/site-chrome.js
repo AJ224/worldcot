@@ -117,8 +117,8 @@
             <h6 class="font-bold uppercase tracking-widest text-xs text-white/90">Get in touch</h6>
             <ul class="space-y-2 text-sm">
               <li>
-                <a class="text-white/80 hover:text-white hover:underline break-all" href="mailto:worldcottradingcorp@gmail.com">
-                  worldcottradingcorp@gmail.com
+                <a class="text-white/80 hover:text-white hover:underline break-all" href="mailto:worldcottradingcorpn@gmail.com">
+                  worldcottradingcorpn@gmail.com
                 </a>
               </li>
               <li>

@@ -1,7 +1,27 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import { resolve } from "node:path";
+import sendEmail from "./api/send-email.js";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  // Make .env variables available to server middleware (process.env.*)
+  const env = loadEnv(mode, process.cwd(), "");
+  for (const [k, v] of Object.entries(env)) {
+    if (typeof process.env[k] === "undefined") process.env[k] = v;
+  }
+
+  return {
+  plugins: [
+    {
+      name: "local-api-send-email",
+      configureServer(server) {
+        server.middlewares.use("/api/send-email", async (req, res) => {
+          // Vite strips the mount path; normalize URL for handler
+          req.url = "/api/send-email";
+          await sendEmail(req, res);
+        });
+      }
+    }
+  ],
   build: {
     rollupOptions: {
       input: {
@@ -17,5 +37,6 @@ export default defineConfig({
       }
     }
   }
+  };
 });
 
